@@ -1,0 +1,151 @@
+fileFormatVersion: 2
+guid: 4a629707a89ffff41b2e8113dda2e38c
+timeCreated: 1472604075
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: head
+    100004: L_ankle_front
+    100006: L_ankle_rear_lower
+    100008: L_ankle_rear_upper
+    100010: L_ear
+    100012: L_ear_tip
+    100014: L_footBase_front
+    100016: L_footBase_rear
+    100018: L_footTip_front
+    100020: L_footTip_rear
+    100022: L_hip_front
+    100024: L_hip_rear
+    100026: L_knee_front
+    100028: L_knee_rear
+    100030: neckBase
+    100032: pelvis
+    100034: R_ankle_front
+    100036: R_ankle_rear_lower
+    100038: R_ankle_rear_upper
+    100040: R_ear
+    100042: R_ear_tip
+    100044: R_footBase_front
+    100046: R_footBase_rear
+    100048: R_footTip_front
+    100050: R_footTip_rear
+    100052: R_hip_front
+    100054: R_hip_rear
+    100056: R_knee_front
+    100058: R_knee_rear
+    100060: snout
+    100062: spine_1
+    100064: spine_2
+    100066: tail_1
+    100068: tail_2
+    100070: tail_3
+    100072: tail_4
+    100074: tail_base
+    100076: tail_end
+    400000: //RootNode
+    400002: head
+    400004: L_ankle_front
+    400006: L_ankle_rear_lower
+    400008: L_ankle_rear_upper
+    400010: L_ear
+    400012: L_ear_tip
+    400014: L_footBase_front
+    400016: L_footBase_rear
+    400018: L_footTip_front
+    400020: L_footTip_rear
+    400022: L_hip_front
+    400024: L_hip_rear
+    400026: L_knee_front
+    400028: L_knee_rear
+    400030: neckBase
+    400032: pelvis
+    400034: R_ankle_front
+    400036: R_ankle_rear_lower
+    400038: R_ankle_rear_upper
+    400040: R_ear
+    400042: R_ear_tip
+    400044: R_footBase_front
+    400046: R_footBase_rear
+    400048: R_footTip_front
+    400050: R_footTip_rear
+    400052: R_hip_front
+    400054: R_hip_rear
+    400056: R_knee_front
+    400058: R_knee_rear
+    400060: snout
+    400062: spine_1
+    400064: spine_2
+    400066: tail_1
+    400068: tail_2
+    400070: tail_3
+    400072: tail_4
+    400074: tail_base
+    400076: tail_end
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

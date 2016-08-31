@@ -21,12 +21,15 @@ public class Fox : MonoBehaviour {
         // Movement
         if (Input.GetKey(KeyCode.D)) // Forward
         {
-            Move(new Vector3(speed, 0, 0));
+            Move(new Vector3(0, speed, 0));
         }
         else if (Input.GetKey(KeyCode.A)) // Backward
         {
-            Move(new Vector3(-speed, 0, 0));
+            Move(new Vector3(0, -speed, 0));
         }
+
+
+
     }
 
     void Move(Vector3 newPos)
