@@ -4,11 +4,12 @@ using System.Collections;
 public class Fox : MonoBehaviour {
 
     public float speed = 1.0f;
-    
+    Animator anim;
+    bool isMoving;
 
 	// Use this for initialization
 	void Start () {
-	
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -18,18 +19,36 @@ public class Fox : MonoBehaviour {
 
     void CheckKeyPress()
     {
+        isMoving = false;
         // Movement
         if (Input.GetKey(KeyCode.D)) // Forward
         {
-            Move(new Vector3(0, speed, 0));
+            Move(new Vector3(speed, 0, 0));
+            if (!isMoving)
+            {
+                isMoving = true;
+                anim.Play("Run");
+            }    
         }
         else if (Input.GetKey(KeyCode.A)) // Backward
         {
-            Move(new Vector3(0, -speed, 0));
+            Move(new Vector3(-speed, 0, 0));
+            if (!isMoving)
+            {
+                isMoving = true;
+                anim.Play("Run");
+            }
         }
 
+        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            isMoving = false;
+        }
 
-
+        if (!isMoving)
+        {
+            anim.Play("Idle");
+        }
     }
 
     void Move(Vector3 newPos)

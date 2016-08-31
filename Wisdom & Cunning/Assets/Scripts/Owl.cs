@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Owl : MonoBehaviour {
 
+    // On Left Mouse Click (Look up "Input" in scripting API), create a Raycast at Mouse click location.
+    // Check it the object it hits (if any) tag = "Interact" if yes get the objects position and move to it.
+    // Make a "Return to Fox" Class.
+
     public GameObject foxObject;
 
     public float speed;
