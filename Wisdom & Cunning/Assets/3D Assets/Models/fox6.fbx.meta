@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4a629707a89ffff41b2e8113dda2e38c
-timeCreated: 1472604075
+guid: ff23ab41529964e2bb6d7b638bb8739b
+timeCreated: 1472643395
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -21,29 +21,32 @@ ModelImporter:
     100026: L_knee_front
     100028: L_knee_rear
     100030: neckBase
-    100032: pelvis
-    100034: R_ankle_front
-    100036: R_ankle_rear_lower
-    100038: R_ankle_rear_upper
-    100040: R_ear
-    100042: R_ear_tip
-    100044: R_footBase_front
-    100046: R_footBase_rear
-    100048: R_footTip_front
-    100050: R_footTip_rear
-    100052: R_hip_front
-    100054: R_hip_rear
-    100056: R_knee_front
-    100058: R_knee_rear
-    100060: snout
-    100062: spine_1
-    100064: spine_2
-    100066: tail_1
-    100068: tail_2
-    100070: tail_3
-    100072: tail_4
-    100074: tail_base
-    100076: tail_end
+    100032: pCube3
+    100034: pelvis
+    100036: pSphere1
+    100038: pSphere2
+    100040: R_ankle_front
+    100042: R_ankle_rear_lower
+    100044: R_ankle_rear_upper
+    100046: R_ear
+    100048: R_ear_tip
+    100050: R_footBase_front
+    100052: R_footBase_rear
+    100054: R_footTip_front
+    100056: R_footTip_rear
+    100058: R_hip_front
+    100060: R_hip_rear
+    100062: R_knee_front
+    100064: R_knee_rear
+    100066: snout
+    100068: spine_1
+    100070: spine_2
+    100072: tail_1
+    100074: tail_2
+    100076: tail_3
+    100078: tail_4
+    100080: tail_base
+    100082: tail_end
     400000: //RootNode
     400002: head
     400004: L_ankle_front
@@ -60,31 +63,39 @@ ModelImporter:
     400026: L_knee_front
     400028: L_knee_rear
     400030: neckBase
-    400032: pelvis
-    400034: R_ankle_front
-    400036: R_ankle_rear_lower
-    400038: R_ankle_rear_upper
-    400040: R_ear
-    400042: R_ear_tip
-    400044: R_footBase_front
-    400046: R_footBase_rear
-    400048: R_footTip_front
-    400050: R_footTip_rear
-    400052: R_hip_front
-    400054: R_hip_rear
-    400056: R_knee_front
-    400058: R_knee_rear
-    400060: snout
-    400062: spine_1
-    400064: spine_2
-    400066: tail_1
-    400068: tail_2
-    400070: tail_3
-    400072: tail_4
-    400074: tail_base
-    400076: tail_end
-    7400000: Take 001
+    400032: pCube3
+    400034: pelvis
+    400036: pSphere1
+    400038: pSphere2
+    400040: R_ankle_front
+    400042: R_ankle_rear_lower
+    400044: R_ankle_rear_upper
+    400046: R_ear
+    400048: R_ear_tip
+    400050: R_footBase_front
+    400052: R_footBase_rear
+    400054: R_footTip_front
+    400056: R_footTip_rear
+    400058: R_hip_front
+    400060: R_hip_rear
+    400062: R_knee_front
+    400064: R_knee_rear
+    400066: snout
+    400068: spine_1
+    400070: spine_2
+    400072: tail_1
+    400074: tail_2
+    400076: tail_3
+    400078: tail_4
+    400080: tail_base
+    400082: tail_end
+    4300000: pCube3
+    4300002: pSphere1
+    4300004: pSphere2
     9500000: //RootNode
+    13700000: pCube3
+    13700002: pSphere1
+    13700004: pSphere2
   materials:
     importMaterials: 1
     materialName: 0
