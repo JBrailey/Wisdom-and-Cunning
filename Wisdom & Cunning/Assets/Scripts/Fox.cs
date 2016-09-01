@@ -6,6 +6,7 @@ public class Fox : MonoBehaviour {
     public float speed = 1.0f;
     Animator anim;
     bool isMoving;
+    bool canInteract;
 
 	// Use this for initialization
 	void Start () {
@@ -39,8 +40,13 @@ public class Fox : MonoBehaviour {
                 anim.Play("Run");
             }
         }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            //Kick
+        }
 
-        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+
+            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             isMoving = false;
         }
@@ -63,5 +69,10 @@ public class Fox : MonoBehaviour {
         {
             //interactObject.getComponent<Lever>.flip
         }
+    }
+
+    public void CanInteract()
+    {
+        canInteract = true;
     }
 }
