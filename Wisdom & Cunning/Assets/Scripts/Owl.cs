@@ -7,23 +7,34 @@ public class Owl : MonoBehaviour {
     // Check it the object it hits (if any) tag = "Interact" if yes get the objects position and move to it.
     // Make a "Return to Fox" Class.
 
-    public GameObject foxObject;
-
+    public Transform foxObject;
+    public Transform followPoint;
+    public float turnSpeed;
     public float speed;
     public float heightAboveFox;
+  
     bool isMoving = false;
     bool returningToFox = false;
     bool atFox = true;
     Vector3 newPosition;
-
+   
     
     // Use this for initialization
-	void Start () {
-	
-	}
+	void Start ()
+    {
+        foxObject = GameObject.FindGameObjectWithTag("Player").transform;
+        followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
+    }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), turnSpeed * Time.deltaTime);
+        transform.position += transform.forward * speed * Time.deltaTime;
+     
+        
+        WaitForClick();
+
 
 	}
 
