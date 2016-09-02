@@ -11,9 +11,7 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        Vector3 offset = new Vector3(-2f, lift, distance);
-
-        transform.position = target.position + offset;
-        //transform.LookAt(target);      
+        Vector3 offset = new Vector3(0, lift, distance);
+        transform.position = target.position + offset;    
 	}
 }
