@@ -13,20 +13,37 @@ public class Interact : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+	    
 	}
 
     void OnTriggerEnter(Collider collider)
     {
+        Debug.Log("T R I G G E R E D");
+
         if (collider.gameObject.tag.Equals("Fox"))
         {
-            // Tell Fox Object was interacted with
-            collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
+            Debug.Log("Fox hit by Trigger");
+            if (objectName.Equals(""))
+            {
+                // Tell Fox Object was interacted with
+                collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
+                Debug.Log("Fox told object name and object");
+            }
+            else
+            {
+                //collider.isTrigger = true;
+            }          
         }
         else if (collider.gameObject.tag.Equals("Owl"))
         {
-            // Tell Owl Object was Interacted With
-            collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);
+            if (objectName.Equals("Lever"))
+            {
+                // Tell Owl Object was Interacted With
+                collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);
+            }else
+            {
+                //collider.isTrigger = true;
+            }                      
         }
     }
 }

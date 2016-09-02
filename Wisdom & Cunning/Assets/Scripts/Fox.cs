@@ -13,6 +13,7 @@ public class Fox : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
+        gameObject.tag = "Fox";
 	}
 	
 	// Update is called once per frame
@@ -93,7 +94,8 @@ public class Fox : MonoBehaviour {
         // e.g if Object is called Lever
         if (interactName.Equals("Lever"))
         {
-            //interactObject.getComponent<Lever>.flip
+            Debug.Log("Interact Name is Lever");
+            interactObject.GetComponent<Lever>().Interact();
         }
     }
 

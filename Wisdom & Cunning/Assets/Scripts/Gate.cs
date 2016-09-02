@@ -10,7 +10,11 @@ public class Gate : MonoBehaviour {
     float openAngle = 0;    
     float doorRotation = 0;
 
-	// Update is called once per frame
+    void Start()
+    {
+        gameObject.tag = "Gate";
+    }
+
 	void Update () {
         Quaternion target;
         if (isOpen)
