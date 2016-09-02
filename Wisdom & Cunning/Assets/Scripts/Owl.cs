@@ -22,7 +22,7 @@ public class Owl : MonoBehaviour {
     // Use this for initialization
 	void Start ()
     {
-        foxObject = GameObject.FindGameObjectWithTag("Player").transform;
+        foxObject = GameObject.FindGameObjectWithTag("Fox").transform;
         followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
         returningToFox = true;
     }
