@@ -5,8 +5,10 @@ public class Fox : MonoBehaviour {
 
     public float speed = 1.0f;
     Animator anim;
+
     bool isMoving;
     bool canInteract;
+    bool isRotated = false;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +27,11 @@ public class Fox : MonoBehaviour {
         if (Input.GetKey(KeyCode.D)) // Forward
         {
             Move(new Vector3(speed, 0, 0));
+
+            if (isRotated)
+            {
+                Rotate();
+            }
             if (!isMoving)
             {
                 isMoving = true;
@@ -33,7 +40,12 @@ public class Fox : MonoBehaviour {
         }
         else if (Input.GetKey(KeyCode.A)) // Backward
         {
-            Move(new Vector3(-speed, 0, 0));
+            Move(new Vector3(speed, 0, 0));
+
+            if (!isRotated)
+            {
+                Rotate();
+            }
             if (!isMoving)
             {
                 isMoving = true;
@@ -45,8 +57,7 @@ public class Fox : MonoBehaviour {
             //Kick
         }
 
-
-            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             isMoving = false;
         }
@@ -54,6 +65,21 @@ public class Fox : MonoBehaviour {
         if (!isMoving)
         {
             anim.Play("Idle");
+        }
+    }
+
+    void Rotate()
+    {
+        if (isRotated)
+        {
+            transform.Rotate(0, 180, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 7);
+            isRotated = false;
+        }else
+        {
+            transform.Rotate(0, 180, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 7);
+            isRotated = true;
         }
     }
 
