@@ -18,12 +18,9 @@ public class Interact : MonoBehaviour {
 
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("T R I G G E R E D");
-
         if (collider.gameObject.tag.Equals("Fox"))
         {
-            Debug.Log("Fox hit by Trigger");
-            if (objectName.Equals(""))
+            if (objectName.Equals("Lever"))
             {
                 // Tell Fox Object was interacted with
                 collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
