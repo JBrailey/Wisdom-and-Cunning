@@ -24,14 +24,17 @@ public class Owl : MonoBehaviour {
     {
         foxObject = GameObject.FindGameObjectWithTag("Player").transform;
         followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
+        returningToFox = true;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), turnSpeed * Time.deltaTime);
-        transform.position += transform.forward * speed * Time.deltaTime;
-     
+        if (returningToFox)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), turnSpeed * Time.deltaTime);
+            transform.position += transform.forward * speed * Time.deltaTime;
+        }
         
         WaitForClick();
 
