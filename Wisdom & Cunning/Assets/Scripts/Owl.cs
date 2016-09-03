@@ -65,7 +65,7 @@ public class Owl : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, 100))                                 //when you are at the object, left click to use it.
             {
                 Debug.DrawLine(ray.origin, hit.point);
-                Interact("Lever", GameObject.FindGameObjectWithTag("Interact"));//"Lever" here will be replaced with the game object name
+                //Interact("Lever", GameObject.FindGameObjectWithTag("Interact"));//"Lever" here will be replaced with the game object name
             }
         }
         // Right Mouse Button Pressed
@@ -92,6 +92,7 @@ public class Owl : MonoBehaviour {
             Debug.Log("Interact Name is Lever");
             interactObject.GetComponent<Lever>().Interact();
         }
+
     }
 
     public void CanInteract()
