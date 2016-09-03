@@ -19,6 +19,7 @@ public class Lever : MonoBehaviour {
     {
         Debug.Log("Lever.Interact Called");
         PullLever();
+        
     }
 
     void PullLever()

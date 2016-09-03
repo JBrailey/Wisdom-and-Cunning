@@ -7,22 +7,27 @@ public class Owl : MonoBehaviour {
     // Check it the object it hits (if any) tag = "Interact" if yes get the objects position and move to it.
     // Make a "Return to Fox" Class.
 
-    public Transform foxObject;
+    
     public Transform followPoint;
+    public Transform goTo;
+
+    public Vector3 canReturn = new Vector3(1, 0, 0);
+
     public float turnSpeed;
     public float speed;
-    public float heightAboveFox;
   
     bool isMoving = false;
     bool returningToFox = false;
-    bool atFox = true;
-    Vector3 newPosition;
+    bool canInteract;
    
-    
+
+
+
+
     // Use this for initialization
-	void Start ()
+    void Start ()
     {
-        foxObject = GameObject.FindGameObjectWithTag("Fox").transform;
+        gameObject.tag = "Owl";
         followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
         returningToFox = true;
     }
@@ -30,23 +35,50 @@ public class Owl : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        Follow();
+        WaitForClick();
+
+
+    }
+
+    void Follow()
+    {
         if (returningToFox)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), turnSpeed * Time.deltaTime);
             transform.position += transform.forward * speed * Time.deltaTime;
         }
-        
-        WaitForClick();
-
-
-	}
+        if (returningToFox == false)
+            Move(goTo);
+    }
 
     void WaitForClick()
     {
-        // Left Mouse Button Pressed
-        if (Input.GetMouseButton(0))
+        //Left Mouse Button Pressed
+        if (Input.GetMouseButtonDown(0))
         {
-            // Raycast Stuff
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+                                                                                    //My overall idea here is to right click to fly to the object
+            if (Physics.Raycast(ray, out hit, 100))                                 //when you are at the object, left click to use it.
+            {
+                Debug.DrawLine(ray.origin, hit.point);
+                Interact("Lever", GameObject.FindGameObjectWithTag("Interact"));//"Lever" here will be replaced with the game object name
+            }
+        }
+        // Right Mouse Button Pressed
+        if (Input.GetMouseButton(1))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 1000))
+            {
+                Debug.DrawLine(ray.origin, hit.point);
+                returningToFox = false;
+                goTo = hit.transform;
+               
+            }
         }
     }
 
@@ -55,13 +87,28 @@ public class Owl : MonoBehaviour {
         // e.g if Object is called Lever
         if (interactName.Equals("Lever"))
         {
-            //interactObject.getComponent<Lever>.flip
+            Debug.Log("Interact Name is Lever");
+            interactObject.GetComponent<Lever>().Interact();
         }
     }
 
-    void Move()
+    public void CanInteract()
     {
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+        canInteract = true;
+    }
+
+  
+
+    void Move(Transform GoTo)
+    {
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(GoTo.position - transform.position), turnSpeed * Time.deltaTime);
+        transform.position += transform.forward * speed * Time.deltaTime;
+        if ((transform.position.x * transform.position.x) - (GoTo.position.x * GoTo.position.x) > canReturn.x)
+        {
+            returningToFox = true;
+        }
+
+        // transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
     }
 
 }

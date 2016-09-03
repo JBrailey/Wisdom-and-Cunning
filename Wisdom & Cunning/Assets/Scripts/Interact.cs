@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
 public class Interact : MonoBehaviour {
 
     public string objectName;
@@ -37,7 +39,10 @@ public class Interact : MonoBehaviour {
             {
                 // Tell Owl Object was Interacted With
                 collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);
-            }else
+                Debug.Log("Owl told object name and object");
+                
+            }
+            else
             {
                 //collider.isTrigger = true;
             }                      
