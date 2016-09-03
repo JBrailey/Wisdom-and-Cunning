@@ -10,6 +10,10 @@ public class Fox : MonoBehaviour {
     bool canInteract;
     bool isRotated = false;
 
+    //  Kicking Handlers
+    bool canKick = false; // allows the fox to kick
+    bool kicked = false; // tests if the fox just kicked
+
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -53,9 +57,14 @@ public class Fox : MonoBehaviour {
                 anim.Play("Run");
             }
         }
-        else if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             //Kick
+            if (canKick == true)
+            {
+                anim.Play("Kick");
+                kicked = true;
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
@@ -96,6 +105,16 @@ public class Fox : MonoBehaviour {
         {
             Debug.Log("Interact Name is Lever");
             interactObject.GetComponent<Lever>().Interact();
+        }
+        if (interactName.Equals("Log"))
+        {
+            canKick = true;
+            if (kicked == true)
+            {
+                Debug.Log("Interact Name is Log");
+                interactObject.GetComponent<Log>().Interact();
+                kicked = false;
+            }
         }
     }
 

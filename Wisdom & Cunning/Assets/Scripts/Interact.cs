@@ -17,8 +17,7 @@ public class Interact : MonoBehaviour {
 	void Update () {
 	    
 	}
-
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider) // Function fires upon entering a trigger collider
     {
         if (collider.gameObject.tag.Equals("Fox"))
         {
@@ -46,6 +45,22 @@ public class Interact : MonoBehaviour {
             {
                 //collider.isTrigger = true;
             }                      
+        }
+    }
+    void OnTriggerStay(Collider collider) // Function fires for the duration an object is within a collider trigger
+    {
+        if (collider.gameObject.tag.Equals("Fox"))
+        {
+            if (objectName.Equals("Log"))
+            {
+                //  Tell Fox Object was interacted with
+                collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
+                Debug.Log("Fox told object name and object");
+            }
+            else
+            {
+                //collider.isTrigger = true;
+            }
         }
     }
 }
