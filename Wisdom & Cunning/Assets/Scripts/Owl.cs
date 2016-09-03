@@ -15,7 +15,9 @@ public class Owl : MonoBehaviour {
 
     public float turnSpeed;
     public float speed;
-  
+
+    public int layerMask = 1 << 5;
+
     bool isMoving = false;
     bool returningToFox = false;
     bool canInteract;
@@ -32,6 +34,8 @@ public class Owl : MonoBehaviour {
         gameObject.tag = "Owl";
         followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
         returningToFox = true;
+        layerMask = ~layerMask;
+
     }
 	
 	// Update is called once per frame
@@ -62,7 +66,7 @@ public class Owl : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
                                                                                     //My overall idea here is to right click to fly to the object
-            if (Physics.Raycast(ray, out hit, 100))                                 //when you are at the object, left click to use it.
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))                                 //when you are at the object, left click to use it.
             {
                 Debug.DrawLine(ray.origin, hit.point);
                 //Interact("Lever", GameObject.FindGameObjectWithTag("Interact"));//"Lever" here will be replaced with the game object name
@@ -74,7 +78,7 @@ public class Owl : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 1000))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 Debug.DrawLine(ray.origin, hit.point);
                 returningToFox = false;
