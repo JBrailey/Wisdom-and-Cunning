@@ -4,43 +4,50 @@ using System.Collections;
 public class Log : MonoBehaviour {
 
     public GameObject interactedObject;
-    Vector3 gravity = new Vector3(0, 4, 0);
-    Vector3 vectorKicked = new Vector3(100, 20, 0);
+    Vector3 vectorKicked = new Vector3(5, -1, 0);
+    
     bool LogKicked = false;
 
+    public float kickSpeed;
+    public float unkickedAngle;
+    public float kickedAngle;
+    //float doorRotation = 0;
+
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         gameObject.tag = "Interact";
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        //Quaternion target;
+        //if (LogKicked == true)
+        //{
+        //    target = Quaternion.Euler(0, 0, kickedAngle);
+        //}
+        //else
+        //{
+        //    target = Quaternion.Euler(0, 0, unkickedAngle);
+        //}
 
-        if (LogKicked == true)
-        {
-            transform.Translate(vectorKicked * Time.deltaTime);
-        }
-
-        //  Gravity
-        if (transform.position.y != 2)
-        {
-            transform.Translate(gravity * Time.deltaTime);
-        }
-        else
-        {
-            LogKicked = false;
-        }
-        
-	}
+        //transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime * kickSpeed);
+    }
 
     public void Interact()
     {
         Debug.Log("Log.Interact Called");
+        interactedObject.GetComponent<LogPivot>().Interact();
         GetKicked();
     }
     
     void GetKicked()
     {
-        LogKicked = true;
+        if (interactedObject.tag.Equals("LogPivot"))
+        {
+            interactedObject.GetComponent<LogPivot>().Interact();
+        }
+        //LogKicked = true;
     }
 }

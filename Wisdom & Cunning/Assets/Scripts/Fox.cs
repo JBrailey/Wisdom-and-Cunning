@@ -116,6 +116,16 @@ public class Fox : MonoBehaviour {
                 kicked = false;
             }
         }
+        if (interactName.Equals("LogPivot"))
+        {
+            canKick = true;
+            if (kicked == true)
+            {
+                Debug.Log("Interact Name is LogPivot");
+                interactObject.GetComponent<LogPivot>().Interact();
+                kicked = false;
+            }
+        }
     }
 
     public void CanInteract()
