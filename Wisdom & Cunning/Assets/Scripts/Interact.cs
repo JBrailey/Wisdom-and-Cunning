@@ -51,7 +51,7 @@ public class Interact : MonoBehaviour {
     {
         if (collider.gameObject.tag.Equals("Fox"))
         {
-            if (objectName.Equals("LogPivot"))
+            if (objectName.Equals("Log"))
             {
                 //  Tell Fox Object was interacted with
                 collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
