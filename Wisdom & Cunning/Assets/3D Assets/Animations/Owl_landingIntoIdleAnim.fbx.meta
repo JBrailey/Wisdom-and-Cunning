@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: c36ba5625460d45509b949e9183081da
+timeCreated: 1473649044
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: brow1_L
+    100002: brow1_R
+    100004: brow2_L
+    100006: brow2_R
+    100008: brow3_L
+    100010: brow3_R
+    100012: brow4_L
+    100014: brow4_R
+    100016: brow5_L
+    100018: brow5_R
+    100020: footBase_L
+    100022: footBase_R
+    100024: head
+    100026: leg_L
+    100028: leg_R
+    100030: //RootNode
+    100032: spine_1
+    100034: spine_2
+    100036: toeFront_L
+    100038: toeFront_R
+    100040: toeFrontTip_L
+    100042: toeFrontTip_R
+    100044: toeRear_L
+    100046: toeRear_R
+    100048: toeRearTip_L
+    100050: toeRearTip_R
+    100052: wing1_L
+    100054: wing1_R
+    100056: wing2_L
+    100058: wing2_R
+    100060: wing3_L
+    100062: wing3_R
+    100064: wing4_L
+    100066: wing4_R
+    100068: wingBase_L
+    100070: wingBase_R
+    400000: brow1_L
+    400002: brow1_R
+    400004: brow2_L
+    400006: brow2_R
+    400008: brow3_L
+    400010: brow3_R
+    400012: brow4_L
+    400014: brow4_R
+    400016: brow5_L
+    400018: brow5_R
+    400020: footBase_L
+    400022: footBase_R
+    400024: head
+    400026: leg_L
+    400028: leg_R
+    400030: //RootNode
+    400032: spine_1
+    400034: spine_2
+    400036: toeFront_L
+    400038: toeFront_R
+    400040: toeFrontTip_L
+    400042: toeFrontTip_R
+    400044: toeRear_L
+    400046: toeRear_R
+    400048: toeRearTip_L
+    400050: toeRearTip_R
+    400052: wing1_L
+    400054: wing1_R
+    400056: wing2_L
+    400058: wing2_R
+    400060: wing3_L
+    400062: wing3_R
+    400064: wing4_L
+    400066: wing4_R
+    400068: wingBase_L
+    400070: wingBase_R
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: spine_1
+        weight: 1
+      - path: spine_1/leg_L
+        weight: 1
+      - path: spine_1/leg_L/footBase_L
+        weight: 1
+      - path: spine_1/leg_L/footBase_L/toeFront_L
+        weight: 1
+      - path: spine_1/leg_L/footBase_L/toeFront_L/toeFrontTip_L
+        weight: 1
+      - path: spine_1/leg_L/footBase_L/toeRear_L
+        weight: 1
+      - path: spine_1/leg_L/footBase_L/toeRear_L/toeRearTip_L
+        weight: 1
+      - path: spine_1/leg_R
+        weight: 1
+      - path: spine_1/leg_R/footBase_R
+        weight: 1
+      - path: spine_1/leg_R/footBase_R/toeFront_R
+        weight: 1
+      - path: spine_1/leg_R/footBase_R/toeFront_R/toeFrontTip_R
+        weight: 1
+      - path: spine_1/leg_R/footBase_R/toeRear_R
+        weight: 1
+      - path: spine_1/leg_R/footBase_R/toeRear_R/toeRearTip_R
+        weight: 1
+      - path: spine_1/spine_2
+        weight: 1
+      - path: spine_1/spine_2/head
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_L
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_L/brow2_L
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_L/brow2_L/brow3_L
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_L/brow2_L/brow3_L/brow4_L
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_L/brow2_L/brow3_L/brow4_L/brow5_L
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_R
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_R/brow2_R
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_R/brow2_R/brow3_R
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_R/brow2_R/brow3_R/brow4_R
+        weight: 1
+      - path: spine_1/spine_2/head/brow1_R/brow2_R/brow3_R/brow4_R/brow5_R
+        weight: 1
+      - path: spine_1/spine_2/wingBase_L
+        weight: 1
+      - path: spine_1/spine_2/wingBase_L/wing1_L
+        weight: 1
+      - path: spine_1/spine_2/wingBase_L/wing1_L/wing2_L
+        weight: 1
+      - path: spine_1/spine_2/wingBase_L/wing1_L/wing2_L/wing3_L
+        weight: 1
+      - path: spine_1/spine_2/wingBase_L/wing1_L/wing2_L/wing3_L/wing4_L
+        weight: 1
+      - path: spine_1/spine_2/wingBase_R
+        weight: 1
+      - path: spine_1/spine_2/wingBase_R/wing1_R
+        weight: 1
+      - path: spine_1/spine_2/wingBase_R/wing1_R/wing2_R
+        weight: 1
+      - path: spine_1/spine_2/wingBase_R/wing1_R/wing2_R/wing3_R
+        weight: 1
+      - path: spine_1/spine_2/wingBase_R/wing1_R/wing2_R/wing3_R/wing4_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

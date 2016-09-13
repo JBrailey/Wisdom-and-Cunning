@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: c2ac6de72d1e8471cb9eb5185f209248
+timeCreated: 1473648957
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: brow1_L
+    100002: brow1_R
+    100004: brow2_L
+    100006: brow2_R
+    100008: brow3_L
+    100010: brow3_R
+    100012: brow4_L
+    100014: brow4_R
+    100016: brow5_L
+    100018: brow5_R
+    100020: footBase_L
+    100022: footBase_R
+    100024: head
+    100026: leg_L
+    100028: leg_R
+    100030: //RootNode
+    100032: pSphere4
+    100034: spine_1
+    100036: spine_2
+    100038: toeFront_L
+    100040: toeFront_R
+    100042: toeFrontTip_L
+    100044: toeFrontTip_R
+    100046: toeRear_L
+    100048: toeRear_R
+    100050: toeRearTip_L
+    100052: toeRearTip_R
+    100054: wing1_L
+    100056: wing1_R
+    100058: wing2_L
+    100060: wing2_R
+    100062: wing3_L
+    100064: wing3_R
+    100066: wing4_L
+    100068: wing4_R
+    100070: wingBase_L
+    100072: wingBase_R
+    400000: brow1_L
+    400002: brow1_R
+    400004: brow2_L
+    400006: brow2_R
+    400008: brow3_L
+    400010: brow3_R
+    400012: brow4_L
+    400014: brow4_R
+    400016: brow5_L
+    400018: brow5_R
+    400020: footBase_L
+    400022: footBase_R
+    400024: head
+    400026: leg_L
+    400028: leg_R
+    400030: //RootNode
+    400032: pSphere4
+    400034: spine_1
+    400036: spine_2
+    400038: toeFront_L
+    400040: toeFront_R
+    400042: toeFrontTip_L
+    400044: toeFrontTip_R
+    400046: toeRear_L
+    400048: toeRear_R
+    400050: toeRearTip_L
+    400052: toeRearTip_R
+    400054: wing1_L
+    400056: wing1_R
+    400058: wing2_L
+    400060: wing2_R
+    400062: wing3_L
+    400064: wing3_R
+    400066: wing4_L
+    400068: wing4_R
+    400070: wingBase_L
+    400072: wingBase_R
+    4300000: pSphere4
+    9500000: //RootNode
+    13700000: pSphere4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

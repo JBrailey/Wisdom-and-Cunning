@@ -1,30 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Owl : MonoBehaviour {
 
     // On Left Mouse Click (Look up "Input" in scripting API), create a Raycast at Mouse click location.
     // Check it the object it hits (if any) tag = "Interact" if yes get the objects position and move to it.
     // Make a "Return to Fox" Class.
 
+
+        
     
+
     public Transform followPoint;
     public Transform goTo;
 
+    
     public Vector3 canReturn = new Vector3(1, 0, 0);
 
     public float turnSpeed;
+
     public float speed;
+    
 
     public int layerMask = 1 << 5;
 
     bool isMoving = false;
     bool returningToFox = false;
     bool canInteract;
-   
+
     //TODO 
 
-
+    
+   
 
 
 
@@ -35,7 +43,7 @@ public class Owl : MonoBehaviour {
         followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
         returningToFox = true;
         layerMask = ~layerMask;
-
+      
     }
 	
 	// Update is called once per frame
@@ -51,8 +59,9 @@ public class Owl : MonoBehaviour {
     {
         if (returningToFox)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), turnSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), Time.deltaTime * turnSpeed);
             transform.position += transform.forward * speed * Time.deltaTime;
+           
         }
         if (returningToFox == false)
             Move(goTo);
