@@ -6,8 +6,9 @@ public class Fox : MonoBehaviour {
     public float speed = 1.0f;
     Animator anim;
 
+    // Animation Handlers
     bool isMoving;
-    bool canInteract;
+    bool isKicking = false;
     bool isRotated = false;
 
     //  Kicking Handlers
@@ -57,13 +58,12 @@ public class Fox : MonoBehaviour {
                 anim.Play("Run");
             }
         }
-        if (Input.GetKey(KeyCode.E))
-        {
+        if (Input.GetKeyDown(KeyCode.E))
+        {            
             //Kick
             if (canKick == true)
             {
-                anim.Play("Kick");
-                kicked = true;
+                Kick();
             }
         }
 
@@ -74,8 +74,19 @@ public class Fox : MonoBehaviour {
 
         if (!isMoving)
         {
-            anim.Play("Idle");
+            if (!isKicking)
+            {
+                anim.Play("Idle");
+            }            
         }
+    }
+
+    void Kick()
+    {
+        Rotate(); // Rotate Fox so he Kicks the Gate
+        isKicking = true; // Keeps Idle Anim from Playing
+        anim.Play("Kick"); // Plays Kicking Anim
+        StartCoroutine(Wait("Kick")); // Wait for animation to play before opening the gate
     }
 
     void Rotate()
@@ -83,12 +94,10 @@ public class Fox : MonoBehaviour {
         if (isRotated)
         {
             transform.Rotate(0, 180, 0);
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 7);
             isRotated = false;
         }else
         {
             transform.Rotate(0, 180, 0);
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 7);
             isRotated = true;
         }
     }
@@ -100,36 +109,37 @@ public class Fox : MonoBehaviour {
 
     public void Interact(string interactName, GameObject interactObject)
     {
-        // e.g if Object is called Lever
-        if (interactName.Equals("Lever"))
-        {
-            Debug.Log("Interact Name is Lever");
-            interactObject.GetComponent<Lever>().Interact();
-        }
         if (interactName.Equals("Log"))
         {
             canKick = true;
             if (kicked == true)
             {
-                Debug.Log("Interact Name is Log");
                 interactObject.GetComponent<Log>().Interact();
                 kicked = false;
             }
+        }else if (interactName.Equals("Locked Gate"))
+        {
+            // Use Key
         }
-        //if (interactName.Equals("LogPivot"))
-        //{
-        //    canKick = true;
-        //    if (kicked == true)
-        //    {
-        //        Debug.Log("Interact Name is LogPivot");
-        //        interactObject.GetComponent<LogPivot>().Interact();
-        //        kicked = false;
-        //    }
-        //}
+        else if (interactName.Equals("Kickable Gate"))
+        {
+            canKick = true;
+            if (kicked == true)
+            {
+                interactObject.GetComponent<Gate>().Interact();
+                kicked = false;
+            }
+        }
     }
 
-    public void CanInteract()
+    IEnumerator Wait(string action)
     {
-        canInteract = true;
+        if (action.Equals("Kick"))
+        {
+            yield return new WaitForSeconds(0.4f); 
+            kicked = true; // Object Gets Kicked
+            isKicking = false; // No longer Kicking, Idle Anim can Play
+            Rotate(); // Rotate Fox Back
+        }
     }
 }
