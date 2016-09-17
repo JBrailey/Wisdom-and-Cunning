@@ -15,6 +15,11 @@ public class Fox : MonoBehaviour {
     bool canKick = false; // allows the fox to kick
     bool kicked = false; // tests if the fox just kicked
 
+    // For Locked Doors
+    bool hasKey = false;
+    bool canInteract = false;
+    bool interacted = false;
+
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -64,6 +69,10 @@ public class Fox : MonoBehaviour {
             if (canKick == true)
             {
                 Kick();
+            }
+            else if (canInteract)
+            {
+                interacted = true;
             }
         }
 
@@ -119,7 +128,14 @@ public class Fox : MonoBehaviour {
             }
         }else if (interactName.Equals("Locked Gate"))
         {
-            // Use Key
+            canInteract = true;
+            if (interacted)
+            {
+                interactObject.GetComponent<Gate>().hasFoxKey = true;
+                hasKey = false;
+                interactObject.GetComponent<Gate>().Interact();
+                interacted = false;
+            }
         }
         else if (interactName.Equals("Kickable Gate"))
         {
@@ -140,6 +156,19 @@ public class Fox : MonoBehaviour {
             kicked = true; // Object Gets Kicked
             isKicking = false; // No longer Kicking, Idle Anim can Play
             Rotate(); // Rotate Fox Back
+            StartCoroutine(Wait("Stop Kicking"));
         }
     }
+
+    public void StopInteraction()
+    {
+        canInteract = false;
+        canKick = false;
+    }
+
+    // For Locked Gates
+    public void PickUpKey()
+    {
+        hasKey = true;
+    }    
 }

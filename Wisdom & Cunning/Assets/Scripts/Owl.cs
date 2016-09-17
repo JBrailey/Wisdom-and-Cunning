@@ -2,26 +2,15 @@
 using System.Collections;
 
 
-public class Owl : MonoBehaviour {
-
-    // On Left Mouse Click (Look up "Input" in scripting API), create a Raycast at Mouse click location.
-    // Check it the object it hits (if any) tag = "Interact" if yes get the objects position and move to it.
-    // Make a "Return to Fox" Class.
-
-
-        
-    
+public class Owl : MonoBehaviour
+{
 
     public Transform followPoint;
     public Transform goTo;
 
-    
     public Vector3 canReturn = new Vector3(1, 0, 0);
-
     public float turnSpeed;
-
     public float speed;
-    
 
     public int layerMask = 1 << 5;
 
@@ -29,30 +18,25 @@ public class Owl : MonoBehaviour {
     bool returningToFox = false;
     bool canInteract;
 
+    // For Locked Gate
+    bool hasKey = false;
+
     //TODO 
 
-    
-   
-
-
-
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         gameObject.tag = "Owl";
         followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
         returningToFox = true;
         layerMask = ~layerMask;
-      
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
         Follow();
         WaitForClick();
-
-
     }
 
     void Follow()
@@ -61,7 +45,6 @@ public class Owl : MonoBehaviour {
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), Time.deltaTime * turnSpeed);
             transform.position += transform.forward * speed * Time.deltaTime;
-           
         }
         if (returningToFox == false)
             Move(goTo);
@@ -74,7 +57,7 @@ public class Owl : MonoBehaviour {
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-                                                                                    //My overall idea here is to right click to fly to the object
+            //My overall idea here is to right click to fly to the object
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))                                 //when you are at the object, left click to use it.
             {
                 Debug.DrawLine(ray.origin, hit.point);
@@ -92,7 +75,6 @@ public class Owl : MonoBehaviour {
                 Debug.DrawLine(ray.origin, hit.point);
                 returningToFox = false;
                 goTo = hit.transform;
-               
             }
         }
     }
@@ -105,15 +87,18 @@ public class Owl : MonoBehaviour {
             Debug.Log("Interact Name is Lever");
             interactObject.GetComponent<Lever>().Interact();
         }
-
+        else if (interactName.Equals("Locked Gate"))
+        {
+            interactObject.GetComponent<Gate>().hasOwlKey = true;
+            hasKey = false;
+            interactObject.GetComponent<Gate>().Interact();
+        }
     }
 
     public void CanInteract()
     {
         canInteract = true;
     }
-
-  
 
     void Move(Transform GoTo)
     {
@@ -123,8 +108,20 @@ public class Owl : MonoBehaviour {
         {
             returningToFox = true;
         }
-
         // transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
     }
 
+    public void PickUpKey()
+    {
+        hasKey = true;
+    }
+
+    public bool HasKey()
+    {
+        if (hasKey)
+        {
+            return true;
+        }
+        return false;
+    }
 }
