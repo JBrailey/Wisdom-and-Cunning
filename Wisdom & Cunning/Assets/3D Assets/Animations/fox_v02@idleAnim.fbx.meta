@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 41caad7abff2244f99a2941bf9fb5175
-timeCreated: 1472642378
+guid: 21a3626efe8f049078fa61a07cdfb300
+timeCreated: 1473228675
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -83,7 +83,7 @@ ModelImporter:
     400072: tail_4
     400074: tail_base
     400076: tail_end
-    7400000: idle5Anim
+    7400000: idleAnim
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -107,7 +107,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: idle5Anim
+      name: idleAnim
       takeName: Take 001
       firstFrame: 1
       lastFrame: 48

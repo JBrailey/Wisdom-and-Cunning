@@ -7,10 +7,9 @@ public class Interact : MonoBehaviour {
 
     public string objectName;
 
-
 	// Use this for initialization
 	void Start () {
-        gameObject.tag = "Interact";
+        //gameObject.tag = "Interact";
 	}
 	
 	// Update is called once per frame
@@ -21,30 +20,15 @@ public class Interact : MonoBehaviour {
     {
         if (collider.gameObject.tag.Equals("Fox"))
         {
-            if (objectName.Equals("Lever"))
-            {
-                // Tell Fox Object was interacted with
-                collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
-                Debug.Log("Fox told object name and object");
-            }
-            else
-            {
-                //collider.isTrigger = true;
-            }          
+            //Objects Here
         }
         else if (collider.gameObject.tag.Equals("Owl"))
         {
             if (objectName.Equals("Lever"))
             {
                 // Tell Owl Object was Interacted With
-                collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);
-                Debug.Log("Owl told object name and object");
-                
-            }
-            else
-            {
-                //collider.isTrigger = true;
-            }                      
+                collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);               
+            }                     
         }
     }
     void OnTriggerStay(Collider collider) // Function fires for the duration an object is within a collider trigger
@@ -53,13 +37,15 @@ public class Interact : MonoBehaviour {
         {
             if (objectName.Equals("Log"))
             {
-                //  Tell Fox Object was interacted with
                 collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
-                Debug.Log("Fox told object name and object");
             }
-            else
+            else if (objectName.Equals("Kickable Gate"))
             {
-                //collider.isTrigger = true;
+                collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
+            }
+            else if (objectName.Equals("Locked Gate"))
+            {
+                collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
             }
         }
     }

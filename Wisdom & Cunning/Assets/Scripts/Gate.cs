@@ -3,16 +3,41 @@ using System.Collections;
 
 public class Gate : MonoBehaviour {
 
+    // Gate Type
+    public bool isLockedGate;
+    public bool isKickedGate;
+    public bool isLeverGate;
+
+    // Door Variables
     public bool isOpen = false;
     public float doorSpeed = 1f;
-
     float closedAngle = 90;
-    float openAngle = 0;    
-    float doorRotation = 0;
+    float openAngle = 0;
+
+    // Keys
+    public bool hasFoxKey;
+    public bool hasOwlKey;
 
     void Start()
     {
         gameObject.tag = "Gate";
+        
+        // To Make sure only one is active
+        if (isKickedGate)
+        {
+            isLockedGate = false;
+            isLeverGate = false;
+        }
+        else if (isLockedGate)
+        {
+            isKickedGate = false;
+            isLeverGate = false;
+        }
+        else if (isLeverGate)
+        {
+            isLockedGate = false;
+            isKickedGate = false;
+        }
     }
 
 	void Update () {
@@ -31,6 +56,25 @@ public class Gate : MonoBehaviour {
 
     public void Interact()
     {
-        isOpen = true;
+        if (isKickedGate || isLeverGate)
+        {
+            isOpen = true;
+        }
+        if (isLockedGate)
+        {
+            if (isUnlocked())
+            {
+                isOpen = true;
+            }
+        }
+    }
+
+    private bool isUnlocked()
+    {
+        if(hasFoxKey && hasOwlKey)
+        {
+            return true;
+        }
+        return false;
     }
 }

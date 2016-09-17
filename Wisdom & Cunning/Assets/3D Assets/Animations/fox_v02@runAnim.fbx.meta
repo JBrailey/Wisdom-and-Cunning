@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: fcc81a0376563400d874b3215b8e82e2
-timeCreated: 1472642384
+guid: cbee34dca008c49d28a5099e0c538769
+timeCreated: 1473228667
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -83,7 +83,7 @@ ModelImporter:
     400072: tail_4
     400074: tail_base
     400076: tail_end
-    7400000: run5Anim
+    7400000: runAnim
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -107,7 +107,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: run5Anim
+      name: runAnim
       takeName: Take 001
       firstFrame: 1
       lastFrame: 24
