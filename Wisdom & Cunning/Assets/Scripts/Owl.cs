@@ -92,6 +92,9 @@ public class Owl : MonoBehaviour
             interactObject.GetComponent<Gate>().hasOwlKey = true;
             hasKey = false;
             interactObject.GetComponent<Gate>().Interact();
+        }else if (interactName.Equals("Crossbow"))
+        {
+            interactObject.GetComponent<Crossbow>().Interact();
         }
     }
 
