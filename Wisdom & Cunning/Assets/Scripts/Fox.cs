@@ -146,6 +146,15 @@ public class Fox : MonoBehaviour {
                 kicked = false;
             }
         }
+        else if (interactName.Equals("Axe"))
+        {
+            canKick = true;
+            if (kicked == true)
+            {
+                interactObject.GetComponent<Axe>().Interact();
+                kicked = false;
+            }
+        }
     }
 
     IEnumerator Wait(string action)

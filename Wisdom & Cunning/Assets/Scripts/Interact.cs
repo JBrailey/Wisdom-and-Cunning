@@ -54,6 +54,10 @@ public class Interact : MonoBehaviour {
             {
                 collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
             }
+            else if (objectName.Equals("Axe"))
+            {
+                collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
+            }
         }
     }
 
