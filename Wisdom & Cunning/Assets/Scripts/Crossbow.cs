@@ -12,7 +12,7 @@ public class Crossbow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    
+        transform.LookAt(target);
 	}
 	
 	// Update is called once per frame
