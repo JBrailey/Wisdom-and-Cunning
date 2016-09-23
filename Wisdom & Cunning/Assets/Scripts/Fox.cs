@@ -24,7 +24,7 @@ public class Fox : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         gameObject.tag = "Fox";
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -179,5 +179,18 @@ public class Fox : MonoBehaviour {
     public void PickUpKey()
     {
         hasKey = true;
-    }    
+    }
+
+    //catapault add and remove parent
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Platform")
+            transform.parent = other.transform;
+        else
+            return;
+    }
+    void OnTriggerExit(Collider other)
+    {
+        transform.parent = null;
+    }  
 }
