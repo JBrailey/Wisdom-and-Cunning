@@ -13,13 +13,13 @@ public class SeeSaw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        anim.Play("SeeSaw");
     }
     void seeSaw()
     {
         if (1 == 1)
         {
-            anim.Play("SeeSaw");
+            
         }
     }
 }
