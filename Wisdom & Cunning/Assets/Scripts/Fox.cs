@@ -4,12 +4,15 @@ using System.Collections;
 public class Fox : MonoBehaviour {
 
     public float speed = 1.0f;
+    public float jump;
     Animator anim;
 
     // Animation Handlers
     bool isMoving;
     bool isKicking = false;
     bool isRotated = false;
+    //jump? sorry Jess :p
+    bool canJump = true;
 
     //  Kicking Handlers
     bool canKick = false; // allows the fox to kick
@@ -88,6 +91,11 @@ public class Fox : MonoBehaviour {
                 anim.Play("Idle");
             }            
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+        
     }
 
     void Kick()
@@ -171,8 +179,22 @@ public class Fox : MonoBehaviour {
             Rotate(); // Rotate Fox Back
             StartCoroutine(Wait("Stop Kicking"));
         }
+        if (action.Equals("Jump") && canJump)
+        {
+            canJump = false;
+            GetComponent<Rigidbody>().AddForce(1, jump, 1);
+            yield return new WaitForSeconds(0.4f);
+            GetComponent<Rigidbody>().AddForce(1, -jump * 1.5f, 1);
+            yield return new WaitForSeconds(0.4f);
+            canJump = true;
+        }
     }
 
+    void Jump()
+    {
+        StartCoroutine(Wait("Jump"));
+    }
+    
     public void StopInteraction()
     {
         canInteract = false;
