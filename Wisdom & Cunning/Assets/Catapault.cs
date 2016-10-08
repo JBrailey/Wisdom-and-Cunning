@@ -1,22 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Catapault : MonoBehaviour {
+public class Catapault : MonoBehaviour
+{
     Animator anim;
-    
+
+    bool canInteract = false;
+
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-       
+
         anim = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-     
-        
-	}
+        catapault();
 
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Fox")
+        {
+            canInteract = true;
+        }
 
+    }
+    void catapault()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && canInteract)
+        {
+            anim.Play("Catapault");
+        }
+        else
+            return;
+    }
 }

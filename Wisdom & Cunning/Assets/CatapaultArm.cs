@@ -5,6 +5,8 @@ public class CatapaultArm : MonoBehaviour
 {
     Animator anim;
 
+    bool canInteract = false;
+
     // Use this for initialization
     void Start()
     {
@@ -15,10 +17,21 @@ public class CatapaultArm : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E))
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Fox")
         {
-            anim.Play("Catapault");
-            anim.Play("Platform");
+            canInteract = true;
+        }
+        else
+            return;
+    }
+    void catapault()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && canInteract)
+        {
+            anim.Play("Arm");
         }
     }
 }
