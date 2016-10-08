@@ -19,6 +19,10 @@ public class Interact : MonoBehaviour {
     {
         if (collider.gameObject.tag.Equals("Fox"))
         {
+            if (collider.gameObject.tag.Equals("Platform"))
+            {
+                collider.gameObject.GetComponent<Fox>().Interact(objectName, gameObject);
+            }
             // Fox Stuff?
         }
         else if (collider.gameObject.tag.Equals("Owl"))

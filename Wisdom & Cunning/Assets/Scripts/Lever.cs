@@ -4,9 +4,11 @@ using System.Collections;
 public class Lever : MonoBehaviour {
 
     public GameObject interactedObject;
+    Animation anim;
 
 	// Use this for initialization
 	void Start () {
+        anim = GetComponent<Animation>();
         gameObject.tag = "Interact";
     }
 	
@@ -28,7 +30,8 @@ public class Lever : MonoBehaviour {
         {
             interactedObject.GetComponent<Gate>().Interact();
         }
-
+        anim.Play("Lever");
         // Insert Other Objects Here
     }
+ 
 }

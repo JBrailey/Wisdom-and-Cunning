@@ -155,6 +155,10 @@ public class Fox : MonoBehaviour {
                 kicked = false;
             }
         }
+        else if (interactName.Equals("Platform"))
+        {
+
+        }
     }
 
     IEnumerator Wait(string action)
