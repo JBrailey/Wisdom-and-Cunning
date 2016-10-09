@@ -18,12 +18,12 @@ public class CatapaultArm : MonoBehaviour
     {
         catapault();
     }
-    void OnCollisionEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Fox")
         {
             canInteract = true;
-        }        
+        }
     }
     void OnTriggerExit(Collider other)
     {
@@ -35,5 +35,7 @@ public class CatapaultArm : MonoBehaviour
         {
             anim.Play("Arm");
         }
+        else
+            return;
     }
 }

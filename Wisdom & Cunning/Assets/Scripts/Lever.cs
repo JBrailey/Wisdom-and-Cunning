@@ -6,6 +6,7 @@ public class Lever : MonoBehaviour
 
     public GameObject interactedObject;
     Animator anim;
+
     bool switched = false;
 
     // Use this for initialization
