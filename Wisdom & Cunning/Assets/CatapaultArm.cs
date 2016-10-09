@@ -16,16 +16,18 @@ public class CatapaultArm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        catapault();
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collider other)
     {
         if (other.tag == "Fox")
         {
             canInteract = true;
-        }
-        else
-            return;
+        }        
+    }
+    void OnTriggerExit(Collider other)
+    {
+        canInteract = false;
     }
     void catapault()
     {

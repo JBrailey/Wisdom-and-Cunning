@@ -10,7 +10,6 @@ public class Catapault : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         anim = GetComponent<Animator>();
     }
 
@@ -18,7 +17,6 @@ public class Catapault : MonoBehaviour
     void Update()
     {
         catapault();
-
     }
     void OnTriggerEnter(Collider other)
     {
@@ -26,7 +24,10 @@ public class Catapault : MonoBehaviour
         {
             canInteract = true;
         }
-
+    }
+    void OnTriggerExit(Collider other)
+    {
+        canInteract = false;
     }
     void catapault()
     {

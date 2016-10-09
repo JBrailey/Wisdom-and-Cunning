@@ -1,27 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Lever : MonoBehaviour {
+public class Lever : MonoBehaviour
+{
 
     public GameObject interactedObject;
-    Animation anim;
+    Animator anim;
+    bool switched = false;
 
-	// Use this for initialization
-	void Start () {
-        anim = GetComponent<Animation>();
+    // Use this for initialization
+    void Start()
+    {
+        anim = GetComponent<Animator>();
         gameObject.tag = "Interact";
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-	}
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void Interact()
     {
         Debug.Log("Lever.Interact Called");
         PullLever();
-        
+        if (switched == false)
+        {
+            anim.Play("Lever");
+            switched = true;
+        }
     }
 
     void PullLever()
@@ -30,8 +38,7 @@ public class Lever : MonoBehaviour {
         {
             interactedObject.GetComponent<Gate>().Interact();
         }
-        anim.Play("Lever");
+
         // Insert Other Objects Here
     }
- 
 }
