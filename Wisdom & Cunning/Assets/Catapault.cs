@@ -29,6 +29,7 @@ public class Catapault : MonoBehaviour
     {
         canInteract = false;
     }
+
     void catapault()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)

@@ -29,10 +29,11 @@ public class CatapaultArm : MonoBehaviour
     {
         canInteract = false;
     }
+
     void catapault()
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
-        {
+        {            
             anim.Play("Arm");
         }
         else

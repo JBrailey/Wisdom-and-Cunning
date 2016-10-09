@@ -217,6 +217,9 @@ public class Fox : MonoBehaviour {
     }
     void OnTriggerExit(Collider other)
     {
-        transform.parent = null;
+        if (other.tag == "Platform")
+            transform.parent = null;
+        else
+            return;        
     }  
 }
