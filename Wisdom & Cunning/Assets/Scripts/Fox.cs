@@ -7,6 +7,9 @@ public class Fox : MonoBehaviour {
     public float jump;
     Animator anim;
 
+    //For WASD Movement
+    bool canMoveWASD = false;
+
     // Animation Handlers
     bool isMoving;
     bool isKicking = false;
@@ -95,7 +98,18 @@ public class Fox : MonoBehaviour {
         {
             Jump();
         }
-        
+
+        if (canMoveWASD)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                Move(new Vector3(0, 0, speed));
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                Move(new Vector3(0, 0, -speed));
+            }
+        }        
     }
 
     void Kick()
@@ -111,10 +125,13 @@ public class Fox : MonoBehaviour {
         if (isRotated)
         {
             transform.Rotate(0, 180, 0);
+            transform.GetChild(0).Rotate(0, 0, 180);
             isRotated = false;
-        }else
+        }
+        else
         {
             transform.Rotate(0, 180, 0);
+            transform.GetChild(0).Rotate(0, 0, 180);
             isRotated = true;
         }
     }
@@ -221,5 +238,11 @@ public class Fox : MonoBehaviour {
             transform.parent = null;
         else
             return;        
-    }  
+    }
+    
+    public void ToggleMovement(bool isUnlocked)
+    {
+        canMoveWASD = isUnlocked;
+    } 
+
 }
