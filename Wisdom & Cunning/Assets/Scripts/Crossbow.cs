@@ -6,6 +6,7 @@ public class Crossbow : MonoBehaviour {
     public Transform target; // Projectile Target
     public GameObject projectileObject;
     public Transform projectileSpawn;
+    public GameObject arrow;
 
     public float projectileSpeed = 15f;
 
@@ -28,6 +29,7 @@ public class Crossbow : MonoBehaviour {
     void Shoot()
     {
         GameObject projectile = (GameObject)Instantiate(projectileObject, projectileSpawn.position, Quaternion.identity);
-        projectile.GetComponent<Projectile>().Setup(target, projectileSpeed);        
+        projectile.GetComponent<Projectile>().Setup(target, projectileSpeed);
+        arrow.SetActive(false);
     }
 }

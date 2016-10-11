@@ -7,6 +7,7 @@ public class Owl : MonoBehaviour
 
     public Transform followPoint;
     public Transform goTo;
+    public GameObject arrow;
 
     public Vector3 canReturn = new Vector3(1, 0, 0);
     public float turnSpeed;
@@ -14,9 +15,8 @@ public class Owl : MonoBehaviour
 
     public int layerMask = 1 << 5;
 
-    bool isMoving = false;
     bool returningToFox = false;
-    bool canInteract;
+
 
     // For Locked Gate
     bool hasKey = false;
@@ -98,16 +98,12 @@ public class Owl : MonoBehaviour
         }
     }
 
-    public void CanInteract()
-    {
-        canInteract = true;
-    }
-
     void Move(Transform GoTo)
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(GoTo.position - transform.position), turnSpeed * Time.deltaTime);
         transform.position += transform.forward * speed * Time.deltaTime;
-        if ((transform.position.x * transform.position.x) - (GoTo.position.x * GoTo.position.x) > canReturn.x)
+        canReturn = transform.position - GoTo.position;
+        if (canReturn.x <= 1 && canReturn.x > -1)
         {
             returningToFox = true;
         }
@@ -126,5 +122,13 @@ public class Owl : MonoBehaviour
             return true;
         }
         return false;
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "BearTrap")
+        {
+            arrow.SetActive(false);
+
+        }
     }
 }
