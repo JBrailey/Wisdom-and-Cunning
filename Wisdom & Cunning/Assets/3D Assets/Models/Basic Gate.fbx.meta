@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 07895ef5f0558604899a950c009ebae1
-timeCreated: 1474867862
+guid: 8268ce5b33d2a584c80b2001d8a8c1ac
+timeCreated: 1476269727
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -32,7 +32,6 @@ ModelImporter:
     4300004: obj_hinge01
     4300006: obj_hinge02
     4300008: obj_gateDoor
-    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1

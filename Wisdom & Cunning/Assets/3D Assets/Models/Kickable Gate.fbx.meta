@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 1456e639bab79f341a5761c1c6852836
+timeCreated: 1476269727
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: grp_chain
+    100002: //RootNode
+    100004: obj_chainLink01
+    100006: obj_chainLink010
+    100008: obj_chainLink011
+    100010: obj_chainLink012
+    100012: obj_chainLink013
+    100014: obj_chainLink014
+    100016: obj_chainLink015
+    100018: obj_chainLink016
+    100020: obj_chainLink016 1
+    100022: obj_chainLink017
+    100024: obj_chainLink018
+    100026: obj_chainLink019
+    100028: obj_chainLink02
+    100030: obj_chainLink03
+    100032: obj_chainLink04
+    100034: obj_chainLink05
+    100036: obj_chainLink06
+    100038: obj_chainLink07
+    100040: obj_chainLink08
+    100042: obj_chainLink09
+    100044: obj_gateDoor
+    100046: obj_hinge01
+    100048: obj_hinge02
+    100050: obj_postL
+    100052: obj_postR
+    100054: transform1
+    100056: transform10
+    100058: transform11
+    100060: transform12
+    100062: transform13
+    100064: transform14
+    100066: transform15
+    100068: transform16
+    100070: transform17
+    100072: transform2
+    100074: transform3
+    100076: transform4
+    100078: transform5
+    100080: transform6
+    100082: transform7
+    100084: transform8
+    100086: transform9
+    400000: grp_chain
+    400002: //RootNode
+    400004: obj_chainLink01
+    400006: obj_chainLink010
+    400008: obj_chainLink011
+    400010: obj_chainLink012
+    400012: obj_chainLink013
+    400014: obj_chainLink014
+    400016: obj_chainLink015
+    400018: obj_chainLink016
+    400020: obj_chainLink016 1
+    400022: obj_chainLink017
+    400024: obj_chainLink018
+    400026: obj_chainLink019
+    400028: obj_chainLink02
+    400030: obj_chainLink03
+    400032: obj_chainLink04
+    400034: obj_chainLink05
+    400036: obj_chainLink06
+    400038: obj_chainLink07
+    400040: obj_chainLink08
+    400042: obj_chainLink09
+    400044: obj_gateDoor
+    400046: obj_hinge01
+    400048: obj_hinge02
+    400050: obj_postL
+    400052: obj_postR
+    400054: transform1
+    400056: transform10
+    400058: transform11
+    400060: transform12
+    400062: transform13
+    400064: transform14
+    400066: transform15
+    400068: transform16
+    400070: transform17
+    400072: transform2
+    400074: transform3
+    400076: transform4
+    400078: transform5
+    400080: transform6
+    400082: transform7
+    400084: transform8
+    400086: transform9
+    2300000: obj_chainLink016
+    2300002: obj_chainLink018
+    2300004: obj_chainLink019
+    2300006: obj_gateDoor
+    2300008: obj_hinge01
+    2300010: obj_hinge02
+    2300012: obj_postL
+    2300014: obj_postR
+    3300000: obj_chainLink016
+    3300002: obj_chainLink018
+    3300004: obj_chainLink019
+    3300006: obj_gateDoor
+    3300008: obj_hinge01
+    3300010: obj_hinge02
+    3300012: obj_postL
+    3300014: obj_postR
+    4300000: obj_postL
+    4300002: obj_postR
+    4300004: obj_hinge01
+    4300006: obj_hinge02
+    4300008: obj_gateDoor
+    4300010: obj_chainLink019
+    4300012: obj_chainLink018
+    4300014: obj_chainLink016
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

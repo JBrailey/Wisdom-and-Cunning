@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public Transform mainMenu, optionsMenu;
+    public Transform mainMenu, levelSelect;
 
   
 	public void LoadScene(string name)
@@ -17,16 +17,16 @@ public class LevelManager : MonoBehaviour
         Application.Quit(); // Quits the game
     }
 
-    public void OptionsMenu(bool toggle)
+    public void LevelSelect(bool toggle)
     {
         if (toggle == true) // If the options menu is toggled load the options menu and deactivate the main menu
         {
-            optionsMenu.gameObject.SetActive(toggle);
+            levelSelect.gameObject.SetActive(toggle);
             mainMenu.gameObject.SetActive(false);
         }
         else // Otherwise deactivate the options menu and activate the main menu
         {
-            optionsMenu.gameObject.SetActive(toggle);
+            levelSelect.gameObject.SetActive(toggle);
             mainMenu.gameObject.SetActive(true);
         }
     }
