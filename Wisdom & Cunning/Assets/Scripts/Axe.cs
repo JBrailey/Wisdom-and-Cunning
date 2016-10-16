@@ -1,17 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
+public class Axes : System.Object
+{
+    public bool isAxeA;
+    public bool isAxeB;
+    public bool isAxeC;
+    public bool isAxeD;
+}
+
 public class Axe : MonoBehaviour {
 
-    public GameObject SquirrelToWake;
-    public GameObject SquirrelToWake2;
-    public GameObject SquirrelToSleep;
-    public GameObject SquirrelToSleep2;
+    public GameObject[] squirrels = new GameObject[4];
+    public Axes axes;
+
+    GameObject[] SquirrelToSleep, SquirrelToWake;
 
     // Use this for initialization
     void Start()
     {
         gameObject.tag = "Axe";
+
+        if (axes.isAxeA) // 3 Wakes, 4 Sleeps
+        {
+            SquirrelToWake[0] = squirrels[2];
+            SquirrelToSleep[0] = squirrels[3];
+        }
+        else if (axes.isAxeB) // 1 Wakes, 3 Sleeps
+        {
+            SquirrelToWake[0] = squirrels[0];
+            SquirrelToSleep[0] = squirrels[2];
+        }
+        else if (axes.isAxeC) // 3 Wakes, 1 & 2 Sleep
+        {
+            SquirrelToWake[0] = squirrels[2];
+            SquirrelToSleep[0] = squirrels[0];
+            SquirrelToSleep[1] = squirrels[1];
+        }
+        else if (axes.isAxeD) // 2 & 4 Wake
+        {
+            SquirrelToWake[0] = squirrels[1];
+            SquirrelToWake[1] = squirrels[3];
+        }
     }
 
     // Update is called once per frame
@@ -22,21 +53,15 @@ public class Axe : MonoBehaviour {
     public void Interact()
     {
         Debug.Log("Axe.Interact Called");
-        if (SquirrelToWake != null)
+
+       foreach(GameObject squirrel in SquirrelToWake)
         {
-            SquirrelToWake.GetComponent<Squirrel>().Interact(1);
+            squirrel.GetComponent<Squirrel>().Interact(true);
         }
-        if (SquirrelToWake2 != null)
+
+       foreach (GameObject squirrel in SquirrelToSleep)
         {
-            SquirrelToWake2.GetComponent<Squirrel>().Interact(1);
-        }
-        if (SquirrelToSleep != null)
-        {
-            SquirrelToSleep.GetComponent<Squirrel>().Interact(2);
-        }
-        if (SquirrelToSleep2 != null)
-        {
-            SquirrelToSleep2.GetComponent<Squirrel>().Interact(2);
+            squirrel.GetComponent<Squirrel>().Interact(false);
         }
     }
 }

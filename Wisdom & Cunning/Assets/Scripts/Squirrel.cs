@@ -4,11 +4,20 @@ using System.Collections;
 public class Squirrel : MonoBehaviour {
 
     public bool asleep;
+    Animator anim;
+    public bool startAwake;
 
 	// Use this for initialization
 	void Start ()
     {
-
+        if (startAwake)
+        {
+            anim.Play("Awake");
+        }else
+        {
+            anim.Play("Asleep");
+        }
+        anim.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -23,18 +32,48 @@ public class Squirrel : MonoBehaviour {
         }
 	}
 
-    public void Interact(int State)
+    public void Interact(bool isWakingUp)
     {
         Debug.Log("Squirrel.Interact Called");
-        if (State == 1)
+        if (isWakingUp)
         {
-            Debug.Log("Squirrel Woken");
-            asleep = false;
+            if (!asleep)
+            {
+                FallAsleep();
+            }
+            else
+            {
+                WakeUp();
+            }
         }
-        else if (State == 2)
+        else
         {
-            Debug.Log("Squirrel Sent to Sleep");
-            asleep = true;
+            FallAsleep();
+        }
+    }
+
+    void WakeUp()
+    {
+        asleep = false;
+        anim.Play("Wake Up");
+    }
+
+    void FallAsleep()
+    {
+        asleep = true;
+        anim.Play("Fall Asleep");
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2f);
+        if (asleep)
+        {
+            anim.Play("Asleep");
+        }
+        else
+        {
+            anim.Play("Awake");
         }
     }
 }
