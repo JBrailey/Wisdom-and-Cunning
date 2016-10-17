@@ -27,7 +27,7 @@ public class BearTrap : MonoBehaviour
     }
     void OnTriggerEnter()
     {
-        arrow.transform.parent = null;
+        //arrow.transform.parent = null;
         ArrowSpawn = (GameObject)Instantiate(arrow, Owl.transform.position, Quaternion.identity);
         ArrowSpawn.transform.rotation = Quaternion.Slerp(ArrowSpawn.transform.rotation, Quaternion.LookRotation(trigger.transform.position - ArrowSpawn.transform.position), turnSpeed * Time.deltaTime);
         arrowFlight = true;
