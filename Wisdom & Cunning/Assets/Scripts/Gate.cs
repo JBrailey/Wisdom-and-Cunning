@@ -11,8 +11,8 @@ public class Gate : MonoBehaviour {
     // Door Variables
     public bool isOpen = false;
     public float doorSpeed = 1f;
-    float closedAngle = 90;
-    float openAngle = 0;
+    float closedAngle = 0;
+    float openAngle = 90;
 
     // Keys
     public bool hasFoxKey;
