@@ -8,12 +8,13 @@ public class Owl : MonoBehaviour
     public Transform followPoint;
     public Transform goTo;
     public GameObject arrow;
+    public Camera camera;
 
     public Vector3 canReturn = new Vector3(1, 0, 0);
     public float turnSpeed;
     public float speed;
 
-    public int layerMask = 1 << 5;
+    public int layerMask = 1<<5;
 
     bool returningToFox = false;
 
@@ -29,7 +30,7 @@ public class Owl : MonoBehaviour
         gameObject.tag = "Owl";
         followPoint = GameObject.FindGameObjectWithTag("FollowPoint").transform;
         returningToFox = true;
-        layerMask = ~layerMask;
+        layerMask = Physics.DefaultRaycastLayers & ~LayerMask.GetMask("UI");
     }
 
     // Update is called once per frame
