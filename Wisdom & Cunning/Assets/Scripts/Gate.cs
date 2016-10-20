@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Gate : MonoBehaviour {
+public class Gate : MonoBehaviour
+{
 
     // Gate Type
     public bool isLockedGate;
@@ -12,7 +13,7 @@ public class Gate : MonoBehaviour {
     public bool isOpen = false;
     public float doorSpeed = 1f;
     float closedAngle = 0;
-    float openAngle = 90;
+    float openAngle = -90;
 
     // Keys
     public bool hasFoxKey;
@@ -21,7 +22,7 @@ public class Gate : MonoBehaviour {
     void Start()
     {
         gameObject.tag = "Gate";
-        
+
         // To Make sure only one is active
         if (isKickedGate)
         {
@@ -40,11 +41,12 @@ public class Gate : MonoBehaviour {
         }
     }
 
-	void Update () {
+    void Update()
+    {
         Quaternion target;
         if (isOpen)
         {
-            target = Quaternion.Euler(0, openAngle, 0);           
+            target = Quaternion.Euler(0, openAngle, 0);
         }
         else
         {
@@ -56,11 +58,17 @@ public class Gate : MonoBehaviour {
 
     public void Interact()
     {
+        Debug.Log("Gate Told to Interact");
+
         if (isKickedGate || isLeverGate)
         {
             isOpen = true;
+            if (isLeverGate)
+            {
+                transform.GetChild(0).gameObject.SetActive(false);
+            }
         }
-        if (isLockedGate)
+        else if (isLockedGate)
         {
             if (isUnlocked())
             {
@@ -71,7 +79,7 @@ public class Gate : MonoBehaviour {
 
     private bool isUnlocked()
     {
-        if(hasFoxKey && hasOwlKey)
+        if (hasFoxKey && hasOwlKey)
         {
             return true;
         }

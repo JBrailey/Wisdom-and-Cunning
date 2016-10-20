@@ -26,11 +26,11 @@ public class Lever : MonoBehaviour
     {
         Debug.Log("Lever.Interact Called");
         PullLever();
-        if (switched == false)
+        /*if (switched == false)
         {
             anim.Play("Lever");
             switched = true;
-        }
+        }*/
     }
 
     void PullLever()
@@ -39,7 +39,5 @@ public class Lever : MonoBehaviour
         {
             interactedObject.GetComponent<Gate>().Interact();
         }
-
-        // Insert Other Objects Here
     }
 }

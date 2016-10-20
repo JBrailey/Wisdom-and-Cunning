@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
-    public Sprite foxLeft, foxRight, owlLeft, owlRight;
+    public Sprite fox, owl;
     public Transform leftAlignDialogue, rightAlignDialogue;
 
     Text leftAlignText, rightAlignText;
@@ -12,8 +12,6 @@ public class DialogueManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        leftAlignImage = leftAlignDialogue.GetChild(1).GetComponent<Image>();   // child 1 is Image
-        rightAlignImage = rightAlignDialogue.GetChild(1).GetComponent<Image>();
         leftAlignText = leftAlignDialogue.GetChild(2).GetComponent<Text>();     // child 2 is text
         rightAlignText = rightAlignDialogue.GetChild(2).GetComponent<Text>();
     }
@@ -23,18 +21,16 @@ public class DialogueManager : MonoBehaviour {
 	
 	}
 
-    public void UpdateDialogue(bool isLeft, bool isFox, string text)
+    public void UpdateDialogue(bool isFox, string text)
     {
-        if (isLeft)
+        if (isFox)
         {
             ToggleAlignment(true);
-            leftAlignImage.sprite = ReturnSprite(isLeft, isFox);
             leftAlignText.text = text;
         }
-        else if (!isLeft)
+        else if (!isFox)
         {
             ToggleAlignment(false);
-            rightAlignImage.sprite = ReturnSprite(isLeft, isFox);
             rightAlignText.text = text;
         }
     }
@@ -56,32 +52,6 @@ public class DialogueManager : MonoBehaviour {
         {
             leftAlignDialogue.gameObject.SetActive(false);
             rightAlignDialogue.gameObject.SetActive(true);
-        }
-    }
-
-    Sprite ReturnSprite(bool isLeft, bool isFox)
-    {
-        if (isLeft)
-        {
-            if (isFox)
-            {
-                return foxLeft;
-            }
-            else
-            {
-                return owlLeft;
-            }
-        }
-        else
-        {
-            if (isFox)
-            {
-                return foxRight;
-            }
-            else
-            {
-                return owlRight;
-            }
         }
     }
 }

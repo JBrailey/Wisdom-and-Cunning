@@ -41,7 +41,7 @@ public class DialogueEditor : MonoBehaviour
                 if (isWritingText)
                 {
                     textIndex = dialogue[dialogueIndex].text.Length;
-                    dialogueManager.UpdateDialogue(isLeft, dialogue[dialogueIndex].isFox, dialogue[dialogueIndex].text);
+                    dialogueManager.UpdateDialogue(dialogue[dialogueIndex].isFox, dialogue[dialogueIndex].text);
                     isWritingText = false;
                 }
                 // If Text is done being Written, Go to next Dialogue
@@ -66,13 +66,19 @@ public class DialogueEditor : MonoBehaviour
                         dialogueManager.CloseDialogue();
                         gameObject.SetActive(false);
                     }
-                }               
+                }
             }
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.M))
+    void OnTriggerEnter(Collider col)
+    {
+        if (!isShowingDialogue)
         {
-            StartDialogue();
+            if (col.gameObject.tag.Equals("Fox"))
+            {
+                StartDialogue();
+            }
         }
     }
 
@@ -101,9 +107,9 @@ public class DialogueEditor : MonoBehaviour
         while (textIndex < dialogue[dialogueIndex].text.Length)
         {
             currentText += dialogue[dialogueIndex].text[textIndex++];
-            dialogueManager.UpdateDialogue(isLeft, dialogue[dialogueIndex].isFox, currentText);
+            dialogueManager.UpdateDialogue(dialogue[dialogueIndex].isFox, currentText);
             yield return new WaitForSeconds(0.0225f);
         }
-        isWritingText = false;        
+        isWritingText = false;
     }
 }
