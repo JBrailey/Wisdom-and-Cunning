@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public Transform pauseMenu;
+    public Canvas DialogueGUI;
+
     public bool pauseGame = false;
 
     void Update()
@@ -12,10 +14,12 @@ public class PauseManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) // If Escape Key is pressed
         {
             pauseGame = !pauseGame; // Pause/Unpause the game
+            DialogueGUI.gameObject.SetActive(true);
         }
         if (pauseGame == true) // If the game is paused
         {
             pauseMenu.gameObject.SetActive(true);
+            DialogueGUI.gameObject.SetActive(false);
             Time.timeScale = 0; 
             // Set the timescale to 0 to pause the game
             // When code is added to allow camera movement put code in here to prevent it e.g
@@ -29,7 +33,9 @@ public class PauseManager : MonoBehaviour
     }
     public void ResumeGame()
     {
+        DialogueGUI.gameObject.SetActive(true);
         pauseGame = false;
+        
     }
 
     public void LoadScene(string name)
