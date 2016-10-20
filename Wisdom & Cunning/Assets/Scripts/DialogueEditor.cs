@@ -103,7 +103,6 @@ public class DialogueEditor : MonoBehaviour
 
         // Type Text one char at a time.
         string currentText = "";
-        Debug.Log("Text: " + currentText);
         while (textIndex < dialogue[dialogueIndex].text.Length)
         {
             currentText += dialogue[dialogueIndex].text[textIndex++];
