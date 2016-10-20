@@ -14,27 +14,19 @@ Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunn
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.036 seconds
+- Completed reload, in  0.081 seconds
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.475975 ms
+UnloadTime: 0.525540 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 59c0 -> priority: 1 
-  Thread -> id: 65d4 -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+  Thread -> id: 6744 -> priority: 1 
+  Thread -> id: 6338 -> priority: 1 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
 The tree tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-The tree Plantain must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-The tree Dandelion02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 139)
 
@@ -42,18 +34,26 @@ The tree Boletus_edulis01 must use the Nature/Soft Occlusion shader. Otherwise b
  
 (Filename:  Line: 139)
 
+The tree Dandelion02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 139)
+
+The tree Plantain must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 139)
+
 The tree Fern01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 139)
 
-UnloadTime: 2.624637 ms
+UnloadTime: 1.229157 ms
 
-Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 928.
-Total: 0.383488 ms (FindLiveObjects: 0.029381 ms CreateObjectMapping: 0.016095 ms MarkObjects: 0.150227 ms  DeleteObjects: 0.187273 ms)
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 441.
+Total: 0.258299 ms (FindLiveObjects: 0.012774 ms CreateObjectMapping: 0.009708 ms MarkObjects: 0.108838 ms  DeleteObjects: 0.126722 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 21.777620 ms
+UnloadTime: 17.333645 ms
 
-Unloading 146 unused Assets to reduce memory usage. Loaded Objects now: 333.
-Total: 3.509651 ms (FindLiveObjects: 0.013029 ms CreateObjectMapping: 0.011241 ms MarkObjects: 0.122890 ms  DeleteObjects: 3.361978 ms)
+Unloading 89 unused Assets to reduce memory usage. Loaded Objects now: 345.
+Total: 3.413076 ms (FindLiveObjects: 0.013540 ms CreateObjectMapping: 0.009708 ms MarkObjects: 0.128510 ms  DeleteObjects: 3.261060 ms)
 
