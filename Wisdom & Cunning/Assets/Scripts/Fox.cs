@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Fox : MonoBehaviour {
 
+    public GameObject keyManager;
+
     public float speed = 1.0f;
     public float jump;
     Animator anim;
@@ -14,15 +16,13 @@ public class Fox : MonoBehaviour {
     bool isMoving;
     bool isKicking = false;
     bool isRotated = false;
-    //jump? sorry Jess :p
     bool canJump = true;
 
     //  Kicking Handlers
     bool canKick = false; // allows the fox to kick
     bool kicked = false; // tests if the fox just kicked
 
-    // For Locked Doors
-    bool hasKey = false;
+    // Interaction Handlers
     bool canInteract = false;
     bool interacted = false;
 
@@ -30,7 +30,6 @@ public class Fox : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         gameObject.tag = "Fox";
-
     }
 	
 	// Update is called once per frame
@@ -157,10 +156,8 @@ public class Fox : MonoBehaviour {
             canInteract = true;
             if (interacted)
             {
-                interactObject.GetComponent<Gate>().hasFoxKey = true;
-                hasKey = false;
-                interactObject.GetComponent<Gate>().Interact();
-                interacted = false;
+                // Uses Keys
+                keyManager.GetComponent<KeyManager>().UseKeys(interactObject);
             }
         }
         else if (interactName.Equals("Kickable Gate"))
@@ -217,12 +214,6 @@ public class Fox : MonoBehaviour {
     {
         canInteract = false;
         canKick = false;
-    }
-
-    // For Locked Gates
-    public void PickUpKey()
-    {
-        hasKey = true;
     }
 
     //catapault add and remove parent

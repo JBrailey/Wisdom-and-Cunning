@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Gate : MonoBehaviour
 {
-
     // Gate Type
     public bool isLockedGate;
     public bool isKickedGate;
@@ -16,8 +15,8 @@ public class Gate : MonoBehaviour
     float openAngle = -90;
 
     // Keys
-    public bool hasFoxKey;
-    public bool hasOwlKey;
+    public int keysRequired;
+    int keyCount = 0;
 
     void Start()
     {
@@ -79,10 +78,20 @@ public class Gate : MonoBehaviour
 
     private bool isUnlocked()
     {
-        if (hasFoxKey && hasOwlKey)
+        if (keysRequired == keyCount)
         {
             return true;
         }
         return false;
+    }
+
+    public int UseKeys(int keysUsed)
+    {
+        while(keyCount < keysRequired && keysUsed > 0)
+        {
+            keyCount++;
+            keysUsed--;
+        }
+        return keysUsed;
     }
 }

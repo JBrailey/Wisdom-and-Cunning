@@ -4,7 +4,6 @@ using System.Collections;
 
 public class Owl : MonoBehaviour
 {
-
     public Transform followPoint;
     public Transform goTo;
     public GameObject arrow;
@@ -18,9 +17,8 @@ public class Owl : MonoBehaviour
 
     bool returningToFox = false;
 
-
     // For Locked Gate
-    bool hasKey = false;
+    public GameObject keyManager;
 
     //TODO 
 
@@ -90,10 +88,10 @@ public class Owl : MonoBehaviour
         }
         else if (interactName.Equals("Locked Gate"))
         {
-            interactObject.GetComponent<Gate>().hasOwlKey = true;
-            hasKey = false;
-            interactObject.GetComponent<Gate>().Interact();
-        }else if (interactName.Equals("Crossbow"))
+            // Uses Keys
+            keyManager.GetComponent<KeyManager>().UseKeys(interactObject);
+        }
+        else if (interactName.Equals("Crossbow"))
         {
             interactObject.GetComponent<Crossbow>().Interact();
         }
@@ -111,25 +109,11 @@ public class Owl : MonoBehaviour
         // transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
     }
 
-    public void PickUpKey()
-    {
-        hasKey = true;
-    }
-
-    public bool HasKey()
-    {
-        if (hasKey)
-        {
-            return true;
-        }
-        return false;
-    }
     void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "BearTrap")
         {
             arrow.SetActive(false);
-
         }
     }
 }
