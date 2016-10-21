@@ -14,7 +14,7 @@ public class Owl : MonoBehaviour
     public float turnSpeed;
     public float speed;
 
-    public int layerMask = 1<<5;
+    public int layerMask = 1<<50;
 
     bool returningToFox = false;
 

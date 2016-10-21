@@ -14,18 +14,40 @@ Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunn
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.090 seconds
+- Completed reload, in  0.084 seconds
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.414147 ms
+UnloadTime: 0.464989 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at LevelManager.SetCursor (UnityEngine.Sprite sprite, Vector2 center) [0x00000] in <filename unknown>:0 
+  at LevelManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4e30 -> priority: 1 
-  Thread -> id: 3874 -> priority: 1 
+  Thread -> id: 5194 -> priority: 1 
+  Thread -> id: 5e3c -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+The tree Boletus_edulis01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 139)
+
+The tree Dandelion02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 139)
+
+The tree Fern01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 139)
+
+The tree Plantain must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 139)
+
 The tree tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 139)
@@ -46,18 +68,8 @@ The tree Fern01 must use the Nature/Soft Occlusion shader. Otherwise billboardin
  
 (Filename:  Line: 139)
 
-UnloadTime: 1.209484 ms
+UnloadTime: 1.158897 ms
 
-Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 1789.
-Total: 0.468566 ms (FindLiveObjects: 0.057229 ms CreateObjectMapping: 0.026315 ms MarkObjects: 0.176798 ms  DeleteObjects: 0.207201 ms)
-
-Log.Interact Called
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 14.039371 ms
-
-Unloading 116 unused Assets to reduce memory usage. Loaded Objects now: 345.
-Total: 3.652469 ms (FindLiveObjects: 0.016095 ms CreateObjectMapping: 0.010475 ms MarkObjects: 0.136942 ms  DeleteObjects: 3.488701 ms)
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 5352.
+Total: 0.948119 ms (FindLiveObjects: 0.117013 ms CreateObjectMapping: 0.043944 ms MarkObjects: 0.337245 ms  DeleteObjects: 0.449405 ms)
 

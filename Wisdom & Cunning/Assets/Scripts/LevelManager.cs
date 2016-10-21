@@ -5,7 +5,19 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public Transform mainMenu, levelSelect;
+    public Sprite mouseSprite;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
 
+
+    void SetCursor(Sprite sprite, Vector2 center)
+    {
+        Cursor.SetCursor(sprite.texture, center, CursorMode.Auto);
+    }
+    void Start()
+    {
+        SetCursor(mouseSprite, hotSpot);
+    }
   
 	public void LoadScene(string name)
     {
@@ -30,4 +42,5 @@ public class LevelManager : MonoBehaviour
             mainMenu.gameObject.SetActive(true);
         }
     }
+    
 }

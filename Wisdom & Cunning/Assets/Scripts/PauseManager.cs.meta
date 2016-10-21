@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 55ceb21a6ad52304180945bde3fe9253
-timeCreated: 1472464437
+timeCreated: 1477030025
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pauseMenu: {instanceID: 0}
+  - DialogueGUI: {instanceID: 0}
+  - cursorTexture: {fileID: 2800000, guid: 54f7f141a78ef5c4facd27aedf102403, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

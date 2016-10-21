@@ -7,6 +7,17 @@ public class PauseManager : MonoBehaviour
     public Transform pauseMenu;
     public Canvas DialogueGUI;
 
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+    void Start()
+    {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    }
+  
+
+
+
     public bool pauseGame = false;
 
     void Update()

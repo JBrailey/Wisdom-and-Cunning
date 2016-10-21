@@ -30,6 +30,7 @@ public class Fox : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         gameObject.tag = "Fox";
+
     }
 	
 	// Update is called once per frame
