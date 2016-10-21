@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Key : MonoBehaviour {
 
-    GameObject keyManager;
+    public GameObject keyManager;
 	
 	// Update is called once per frame
 	void Update () {
@@ -12,6 +12,7 @@ public class Key : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        keyManager.GetComponent<KeyManager>().PickUpKey(1);       
+        keyManager.GetComponent<KeyManager>().PickUpKey(1);
+        gameObject.SetActive(false);       
     }
 }
