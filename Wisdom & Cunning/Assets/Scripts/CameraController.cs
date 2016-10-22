@@ -15,7 +15,6 @@ public class CameraController : MonoBehaviour {
     {
         Vector3 offset = new Vector3(xPos, lift, distance);
         Vector3 newPos = target.position + offset;
-        newPos.z = distance;
         transform.position = newPos;    
 	}
 }

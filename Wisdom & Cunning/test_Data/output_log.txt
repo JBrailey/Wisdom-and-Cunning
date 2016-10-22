@@ -14,37 +14,23 @@ Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunn
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.048 seconds
+- Completed reload, in  0.084 seconds
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.487983 ms
-NullReferenceException: Object reference not set to an instance of an object
-  at LevelManager.SetCursor (UnityEngine.Sprite sprite, Vector2 center) [0x00000] in <filename unknown>:0 
-  at LevelManager.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
+UnloadTime: 0.457070 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4a18 -> priority: 1 
-  Thread -> id: 1f30 -> priority: 1 
+  Thread -> id: 36e0 -> priority: 1 
+  Thread -> id: 12b4 -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-The tree Boletus_edulis01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 139)
 
-The tree Dandelion02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-The tree Fern01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-The tree Plantain must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+The tree Terrain rock must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 139)
 
@@ -52,315 +38,40 @@ The tree tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/
  
 (Filename:  Line: 139)
 
-The tree Boletus_edulis01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
+UnloadTime: 1.207442 ms
 
-The tree Dandelion02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-The tree Plantain must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-The tree Fern01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-UnloadTime: 1.200031 ms
-
-Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 5355.
-Total: 1.265181 ms (FindLiveObjects: 0.185740 ms CreateObjectMapping: 0.065916 ms MarkObjects: 0.418490 ms  DeleteObjects: 0.594778 ms)
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 14296.
+Total: 2.048002 ms (FindLiveObjects: 0.299433 ms CreateObjectMapping: 0.157636 ms MarkObjects: 0.797637 ms  DeleteObjects: 0.793039 ms)
 
 Log.Interact Called
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
+Gate Told to Interact
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
+Gate Told to Interact
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
+Log.Interact Called
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
+Gate Told to Interact
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
+Interact Name is Lever
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
+Lever.Interact Called
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
+Gate Told to Interact
  
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at PauseManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 23.942890 ms
-
-Unloading 158 unused Assets to reduce memory usage. Loaded Objects now: 348.
-Total: 4.053587 ms (FindLiveObjects: 0.013029 ms CreateObjectMapping: 0.010475 ms MarkObjects: 0.128766 ms  DeleteObjects: 3.900804 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at LevelManager.SetCursor (UnityEngine.Sprite sprite, Vector2 center) [0x00000] in <filename unknown>:0 
-  at LevelManager.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
