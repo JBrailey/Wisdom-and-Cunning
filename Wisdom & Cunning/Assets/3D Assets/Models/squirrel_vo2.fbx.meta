@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: 6fef0cd3457c44d96a5fa6e892be4c72
+timeCreated: 1476665518
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ankle_front_L
+    100002: ankle_front_R
+    100004: ankle_rear_L
+    100006: ankle_rear_R
+    100008: back
+    100010: clavacle
+    100012: elbow_front_L
+    100014: elbow_front_R
+    100016: elbow_rear_L
+    100018: elbow_rear_R
+    100020: eyeControl_pivot_L
+    100022: eyeControl_pivot_R
+    100024: eyeControl_root_L
+    100026: eyeControl_root_R
+    100028: eyeControl_tip_L
+    100030: eyeControl_tip_R
+    100032: face_tip
+    100034: foot_front_L
+    100036: foot_front_R
+    100038: foot_rear_L
+    100040: foot_rear_R
+    100042: footTip_front_L
+    100044: footTip_front_R
+    100046: footTip_rear_L
+    100048: footTip_rear_R
+    100050: geo_body
+    100052: geo_body2
+    100054: gut_pivot_L
+    100056: gut_pivot_R
+    100058: gut_pivot_top
+    100060: gut_tip_L
+    100062: gut_tip_R
+    100064: gut_tip_top
+    100066: head
+    100068: head_pivot
+    100070: joint1
+    100072: leg_front_L
+    100074: leg_front_pivot_L
+    100076: leg_front_pivot_R
+    100078: leg_front_R
+    100080: leg_pivot_L
+    100082: leg_pivot_R
+    100084: leg_rear_L
+    100086: leg_rear_R
+    100088: neck
+    100090: neck_base
+    100092: pCube1
+    100094: pelvis
+    100096: pSphere1
+    100098: pSphere2
+    100100: pSphere3
+    100102: pSphere4
+    100104: pSphere5
+    100106: //RootNode
+    100108: tail1
+    100110: tail2
+    100112: tail3
+    100114: tail4
+    100116: tail_base
+    100118: tail_tip
+    100120: transform1
+    100122: transform2
+    100124: transform3
+    100126: transform4
+    100128: transform5
+    400000: ankle_front_L
+    400002: ankle_front_R
+    400004: ankle_rear_L
+    400006: ankle_rear_R
+    400008: back
+    400010: clavacle
+    400012: elbow_front_L
+    400014: elbow_front_R
+    400016: elbow_rear_L
+    400018: elbow_rear_R
+    400020: eyeControl_pivot_L
+    400022: eyeControl_pivot_R
+    400024: eyeControl_root_L
+    400026: eyeControl_root_R
+    400028: eyeControl_tip_L
+    400030: eyeControl_tip_R
+    400032: face_tip
+    400034: foot_front_L
+    400036: foot_front_R
+    400038: foot_rear_L
+    400040: foot_rear_R
+    400042: footTip_front_L
+    400044: footTip_front_R
+    400046: footTip_rear_L
+    400048: footTip_rear_R
+    400050: geo_body
+    400052: geo_body2
+    400054: gut_pivot_L
+    400056: gut_pivot_R
+    400058: gut_pivot_top
+    400060: gut_tip_L
+    400062: gut_tip_R
+    400064: gut_tip_top
+    400066: head
+    400068: head_pivot
+    400070: joint1
+    400072: leg_front_L
+    400074: leg_front_pivot_L
+    400076: leg_front_pivot_R
+    400078: leg_front_R
+    400080: leg_pivot_L
+    400082: leg_pivot_R
+    400084: leg_rear_L
+    400086: leg_rear_R
+    400088: neck
+    400090: neck_base
+    400092: pCube1
+    400094: pelvis
+    400096: pSphere1
+    400098: pSphere2
+    400100: pSphere3
+    400102: pSphere4
+    400104: pSphere5
+    400106: //RootNode
+    400108: tail1
+    400110: tail2
+    400112: tail3
+    400114: tail4
+    400116: tail_base
+    400118: tail_tip
+    400120: transform1
+    400122: transform2
+    400124: transform3
+    400126: transform4
+    400128: transform5
+    4300000: pSphere2
+    4300002: pSphere3
+    4300004: geo_body2
+    9500000: //RootNode
+    13700000: geo_body2
+    13700002: pSphere2
+    13700004: pSphere3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

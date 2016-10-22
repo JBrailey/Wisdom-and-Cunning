@@ -1,0 +1,309 @@
+fileFormatVersion: 2
+guid: 9bbfd58e0fdc5498890501e3e0a89149
+timeCreated: 1476666985
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ankle_front_L
+    100002: ankle_front_R
+    100004: ankle_rear_L
+    100006: ankle_rear_R
+    100008: back
+    100010: clavacle
+    100012: elbow_front_L
+    100014: elbow_front_R
+    100016: elbow_rear_L
+    100018: elbow_rear_R
+    100020: eyeControl_pivot_L
+    100022: eyeControl_pivot_R
+    100024: eyeControl_root_L
+    100026: eyeControl_root_R
+    100028: eyeControl_tip_L
+    100030: eyeControl_tip_R
+    100032: face_tip
+    100034: foot_front_L
+    100036: foot_front_R
+    100038: foot_rear_L
+    100040: foot_rear_R
+    100042: footTip_front_L
+    100044: footTip_front_R
+    100046: footTip_rear_L
+    100048: footTip_rear_R
+    100050: gut_pivot_L
+    100052: gut_pivot_R
+    100054: gut_pivot_top
+    100056: gut_tip_L
+    100058: gut_tip_R
+    100060: gut_tip_top
+    100062: head
+    100064: head_pivot
+    100066: joint1
+    100068: leg_front_L
+    100070: leg_front_pivot_L
+    100072: leg_front_pivot_R
+    100074: leg_front_R
+    100076: leg_pivot_L
+    100078: leg_pivot_R
+    100080: leg_rear_L
+    100082: leg_rear_R
+    100084: neck
+    100086: neck_base
+    100088: pelvis
+    100090: //RootNode
+    100092: tail1
+    100094: tail2
+    100096: tail3
+    100098: tail4
+    100100: tail_base
+    100102: tail_tip
+    400000: ankle_front_L
+    400002: ankle_front_R
+    400004: ankle_rear_L
+    400006: ankle_rear_R
+    400008: back
+    400010: clavacle
+    400012: elbow_front_L
+    400014: elbow_front_R
+    400016: elbow_rear_L
+    400018: elbow_rear_R
+    400020: eyeControl_pivot_L
+    400022: eyeControl_pivot_R
+    400024: eyeControl_root_L
+    400026: eyeControl_root_R
+    400028: eyeControl_tip_L
+    400030: eyeControl_tip_R
+    400032: face_tip
+    400034: foot_front_L
+    400036: foot_front_R
+    400038: foot_rear_L
+    400040: foot_rear_R
+    400042: footTip_front_L
+    400044: footTip_front_R
+    400046: footTip_rear_L
+    400048: footTip_rear_R
+    400050: gut_pivot_L
+    400052: gut_pivot_R
+    400054: gut_pivot_top
+    400056: gut_tip_L
+    400058: gut_tip_R
+    400060: gut_tip_top
+    400062: head
+    400064: head_pivot
+    400066: joint1
+    400068: leg_front_L
+    400070: leg_front_pivot_L
+    400072: leg_front_pivot_R
+    400074: leg_front_R
+    400076: leg_pivot_L
+    400078: leg_pivot_R
+    400080: leg_rear_L
+    400082: leg_rear_R
+    400084: neck
+    400086: neck_base
+    400088: pelvis
+    400090: //RootNode
+    400092: tail1
+    400094: tail2
+    400096: tail3
+    400098: tail4
+    400100: tail_base
+    400102: tail_tip
+    7400000: anim
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: anim
+      takeName: Take 001
+      firstFrame: 53
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/back
+        weight: 1
+      - path: pelvis/back/clavacle
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_L
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_L/leg_front_pivot_L
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_L/leg_front_pivot_L/elbow_front_L
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_L/leg_front_pivot_L/elbow_front_L/ankle_front_L
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_L/leg_front_pivot_L/elbow_front_L/ankle_front_L/foot_front_L
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_L/leg_front_pivot_L/elbow_front_L/ankle_front_L/foot_front_L/footTip_front_L
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_R
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_R/leg_front_pivot_R
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_R/leg_front_pivot_R/elbow_front_R
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_R/leg_front_pivot_R/elbow_front_R/ankle_front_R
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_R/leg_front_pivot_R/elbow_front_R/ankle_front_R/foot_front_R
+        weight: 1
+      - path: pelvis/back/clavacle/leg_front_R/leg_front_pivot_R/elbow_front_R/ankle_front_R/foot_front_R/footTip_front_R
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head/eyeControl_root_L
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head/eyeControl_root_L/eyeControl_pivot_L
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head/eyeControl_root_L/eyeControl_pivot_L/eyeControl_tip_L
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head/eyeControl_root_R
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head/eyeControl_root_R/eyeControl_pivot_R
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head/eyeControl_root_R/eyeControl_pivot_R/eyeControl_tip_R
+        weight: 1
+      - path: pelvis/back/clavacle/neck_base/neck/head_pivot/head/face_tip
+        weight: 1
+      - path: pelvis/back/gut_pivot_L
+        weight: 1
+      - path: pelvis/back/gut_pivot_L/gut_tip_L
+        weight: 1
+      - path: pelvis/back/gut_pivot_R
+        weight: 1
+      - path: pelvis/back/gut_pivot_R/gut_tip_R
+        weight: 1
+      - path: pelvis/back/gut_pivot_top
+        weight: 1
+      - path: pelvis/back/gut_pivot_top/gut_tip_top
+        weight: 1
+      - path: pelvis/leg_rear_L
+        weight: 1
+      - path: pelvis/leg_rear_L/leg_pivot_L
+        weight: 1
+      - path: pelvis/leg_rear_L/leg_pivot_L/elbow_rear_L
+        weight: 1
+      - path: pelvis/leg_rear_L/leg_pivot_L/elbow_rear_L/ankle_rear_L
+        weight: 1
+      - path: pelvis/leg_rear_L/leg_pivot_L/elbow_rear_L/ankle_rear_L/foot_rear_L
+        weight: 1
+      - path: pelvis/leg_rear_L/leg_pivot_L/elbow_rear_L/ankle_rear_L/foot_rear_L/footTip_rear_L
+        weight: 1
+      - path: pelvis/leg_rear_R
+        weight: 1
+      - path: pelvis/leg_rear_R/leg_pivot_R
+        weight: 1
+      - path: pelvis/leg_rear_R/leg_pivot_R/elbow_rear_R
+        weight: 1
+      - path: pelvis/leg_rear_R/leg_pivot_R/elbow_rear_R/ankle_rear_R
+        weight: 1
+      - path: pelvis/leg_rear_R/leg_pivot_R/elbow_rear_R/ankle_rear_R/foot_rear_R
+        weight: 1
+      - path: pelvis/leg_rear_R/leg_pivot_R/elbow_rear_R/ankle_rear_R/foot_rear_R/footTip_rear_R
+        weight: 1
+      - path: pelvis/tail_base
+        weight: 1
+      - path: pelvis/tail_base/joint1
+        weight: 1
+      - path: pelvis/tail_base/joint1/tail1
+        weight: 1
+      - path: pelvis/tail_base/joint1/tail1/tail2
+        weight: 1
+      - path: pelvis/tail_base/joint1/tail1/tail2/tail3
+        weight: 1
+      - path: pelvis/tail_base/joint1/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: pelvis/tail_base/joint1/tail1/tail2/tail3/tail4/tail_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
