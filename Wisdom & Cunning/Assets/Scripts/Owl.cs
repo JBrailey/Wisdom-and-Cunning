@@ -37,16 +37,20 @@ public class Owl : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, followPoint.position);
-        Accelerate = speed + distance;
+        Accelerate = (speed + distance) /5;
         Follow();
         WaitForClick();
     }
-
+    
     void Follow()
     {        
         if (returningToFox)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), Time.deltaTime * turnSpeed);
+            if (Accelerate < speed)
+            {
+                Accelerate = speed;
+            }
             transform.position += transform.forward * Accelerate * Time.deltaTime;
         }
         if (returningToFox == false)
@@ -104,7 +108,11 @@ public class Owl : MonoBehaviour
     void Move(Transform GoTo)
     {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(GoTo.position - transform.position), turnSpeed * Time.deltaTime);
-        transform.position += transform.forward * (speed*3) * Time.deltaTime;
+        if (Accelerate< speed)
+        {
+            Accelerate = speed;
+        }
+        transform.position += transform.forward * Accelerate * Time.deltaTime;
         canReturn = transform.position - GoTo.position;
         if (canReturn.x <= 1 && canReturn.x > -1)
         {
