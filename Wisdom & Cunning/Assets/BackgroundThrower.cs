@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Catapault : MonoBehaviour
-{
+public class BackgroundThrower : MonoBehaviour {
+
     Animator anim;
 
     bool canInteract = false;
@@ -36,7 +36,8 @@ public class Catapault : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
-            anim.Play("Catapault");
+            
+            anim.Play("Background Thrower");
         }
         else
             return;

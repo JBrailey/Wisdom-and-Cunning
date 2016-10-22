@@ -191,7 +191,7 @@ public class Fox : MonoBehaviour {
         }
         else if (interactName.Equals("Platform"))
         {
-
+           
         }
     }
 
