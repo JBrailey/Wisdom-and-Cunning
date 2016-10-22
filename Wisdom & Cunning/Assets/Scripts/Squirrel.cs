@@ -6,6 +6,8 @@ public class Squirrel : MonoBehaviour {
     public bool asleep;
     Animator anim;
     public bool startAwake;
+    public float speed = 10f;
+    bool isMoving = false;
 
 	// Use this for initialization
 	void Start ()
@@ -29,6 +31,11 @@ public class Squirrel : MonoBehaviour {
         else
         {
             GetComponent<BoxCollider>().enabled = true;
+        }
+
+        if (isMoving)
+        {
+            transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime);
         }
 	}
 
@@ -56,24 +63,41 @@ public class Squirrel : MonoBehaviour {
     {
         asleep = false;
         anim.Play("Wake Up");
+        StartCoroutine(Wait("WaitForIdle"));
     }
 
     void FallAsleep()
     {
         asleep = true;
         anim.Play("Fall Asleep");
+        StartCoroutine(Wait("WaitForIdle"));
     }
 
-    IEnumerator Wait()
+    IEnumerator Wait(string action)
     {
-        yield return new WaitForSeconds(2f);
-        if (asleep)
+        if (action.Equals("WaitForIdle"))
         {
-            anim.Play("Asleep");
+            yield return new WaitForSeconds(2f);
+            if (asleep)
+            {
+                anim.Play("Asleep");
+            }
+            else
+            {
+                anim.Play("Awake");
+            }
         }
-        else
+        else if (action.Equals("Despawn"))
         {
-            anim.Play("Awake");
+            yield return new WaitForSeconds(10f);
+            gameObject.SetActive(false);
         }
+    }
+
+    public void RunAway()
+    {
+        transform.eulerAngles = new Vector3(0, -90, 0);
+        isMoving = true;
+        StartCoroutine(Wait("Despawn"));
     }
 }

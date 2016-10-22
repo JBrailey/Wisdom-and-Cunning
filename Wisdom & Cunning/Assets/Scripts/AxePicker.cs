@@ -10,6 +10,10 @@ public class AxePicker : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        axe1.GetComponent<Axe>().manager = gameObject;
+        axe2.GetComponent<Axe>().manager = gameObject;
+        axe3.GetComponent<Axe>().manager = gameObject;
+        axe4.GetComponent<Axe>().manager = gameObject;
         DetermineAxes();
     }
 
@@ -156,5 +160,13 @@ public class AxePicker : MonoBehaviour
                 axe4.GetComponent<Axe>().axes.isAxeD = true;
             }
         }
+    }
+
+    public void DeactivateAxes()
+    {
+        axe1.GetComponent<Axe>().canInteract = false;
+        axe2.GetComponent<Axe>().canInteract = false;
+        axe3.GetComponent<Axe>().canInteract = false;
+        axe4.GetComponent<Axe>().canInteract = false;
     }
 }

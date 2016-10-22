@@ -14,6 +14,9 @@ public class Axe : MonoBehaviour {
 
     public GameObject[] squirrels = new GameObject[4];
     public Axes axes;
+    public GameObject manager;
+
+    public bool canInteract = true;
 
     GameObject[] SquirrelToSleep, SquirrelToWake;
 
@@ -50,18 +53,42 @@ public class Axe : MonoBehaviour {
 	
 	}
 
+    void CheckIfSolved()
+    {
+        if (!squirrels[0].GetComponent<Squirrel>().asleep)
+        {
+            if (!squirrels[1].GetComponent<Squirrel>().asleep)
+            {
+                if (!squirrels[2].GetComponent<Squirrel>().asleep)
+                {
+                    if (!squirrels[3].GetComponent<Squirrel>().asleep)
+                    {
+                        squirrels[0].GetComponent<Squirrel>().RunAway();
+                        squirrels[1].GetComponent<Squirrel>().RunAway();
+                        squirrels[2].GetComponent<Squirrel>().RunAway();
+                        squirrels[3].GetComponent<Squirrel>().RunAway();
+                        manager.GetComponent<AxePicker>().DeactivateAxes();
+                    }
+                }
+            }
+        }
+    }
+
     public void Interact()
     {
         Debug.Log("Axe.Interact Called");
-
-       foreach(GameObject squirrel in SquirrelToWake)
+        if (canInteract)
         {
-            squirrel.GetComponent<Squirrel>().Interact(true);
-        }
+            foreach (GameObject squirrel in SquirrelToWake)
+            {
+                squirrel.GetComponent<Squirrel>().Interact(true);
+            }
 
-       foreach (GameObject squirrel in SquirrelToSleep)
-        {
-            squirrel.GetComponent<Squirrel>().Interact(false);
+            foreach (GameObject squirrel in SquirrelToSleep)
+            {
+                squirrel.GetComponent<Squirrel>().Interact(false);
+            }
+            CheckIfSolved();
         }
     }
 }
