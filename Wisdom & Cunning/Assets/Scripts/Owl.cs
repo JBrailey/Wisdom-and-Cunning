@@ -132,7 +132,7 @@ public class Owl : MonoBehaviour
         transform.position += transform.forward * Accelerate * Time.deltaTime;
         canReturn = transform.position - GoTo.position;
         //if (canReturn.x <= 1 && canReturn.x > -1)
-        if (goToDistance<10)
+        if (goToDistance<5)
         { 
             returningToFox = true;
         }
