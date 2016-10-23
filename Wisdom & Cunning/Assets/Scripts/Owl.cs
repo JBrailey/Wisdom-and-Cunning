@@ -13,7 +13,8 @@ public class Owl : MonoBehaviour
     public Vector3 canReturn = new Vector3(1, 0, 0);
     public float turnSpeed;
     public float speed;
-    public float distance;
+    public float foxDistance;
+    public float goToDistance;
     private float Accelerate;
     private bool inMaze = false;
     public Vector3 flyUp = new Vector3(0,1,0);
@@ -40,8 +41,9 @@ public class Owl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector3.Distance(transform.position, followPoint.position);
-        Accelerate = (speed + distance) /5;
+        foxDistance = Vector3.Distance(transform.position, followPoint.position);
+        Accelerate = (speed + foxDistance) /5;
+        goToDistance = Vector3.Distance(transform.position, goTo.position);
         Follow();
         WaitForClick();
     }
@@ -129,8 +131,9 @@ public class Owl : MonoBehaviour
         }
         transform.position += transform.forward * Accelerate * Time.deltaTime;
         canReturn = transform.position - GoTo.position;
-        if (canReturn.x <= 1 && canReturn.x > -1)
-        {
+        //if (canReturn.x <= 1 && canReturn.x > -1)
+        if (goToDistance<10)
+        { 
             returningToFox = true;
         }
       
