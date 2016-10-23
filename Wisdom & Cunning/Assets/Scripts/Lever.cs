@@ -26,11 +26,11 @@ public class Lever : MonoBehaviour
     {
         Debug.Log("Lever.Interact Called");
         PullLever();
-        /*if (switched == false)
-        {
-            anim.Play("Lever");
-            switched = true;
-        }*/
+        //if (switched == false)
+        //{
+        //    anim.Play("Lever");
+        //    switched = true;
+        //}
     }
 
     void PullLever()
