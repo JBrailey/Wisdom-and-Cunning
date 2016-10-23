@@ -42,7 +42,7 @@ public class Owl : MonoBehaviour
     void Update()
     {
         foxDistance = Vector3.Distance(transform.position, followPoint.position);
-        Accelerate = (speed + foxDistance) /5;
+        Accelerate = (speed + foxDistance) /2.5f;
         goToDistance = Vector3.Distance(transform.position, goTo.position);
         Follow();
         WaitForClick();
