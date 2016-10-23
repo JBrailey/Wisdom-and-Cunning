@@ -25,6 +25,7 @@ public class Fox : MonoBehaviour {
     // Interaction Handlers
     bool canInteract = false;
     bool interacted = false;
+    bool canKickAxe = false;
 
     //Rotations
     Vector3 up = new Vector3(0, -90, 0);
@@ -101,7 +102,6 @@ public class Fox : MonoBehaviour {
                     isMoving = true;
                     anim.Play("Run");
                 }
-                //Move(new Vector3(speed, 0, 0));
             }
         }
 
@@ -110,7 +110,14 @@ public class Fox : MonoBehaviour {
             //Kick
             if (canKick)
             {
-                Kick();
+                if (canKickAxe)
+                {
+                    AxeKick();
+                }
+                else
+                {
+                    Kick();
+                }                
             }
             else if (canInteract)
             {
@@ -142,10 +149,17 @@ public class Fox : MonoBehaviour {
     void Kick()
     {
         transform.Rotate(0, 180, 0);
-        transform.GetChild(0).Rotate(0, 0, 180);
         isKicking = true; 
         anim.Play("Kick");
         StartCoroutine(Wait("Kick"));
+    }
+
+    void AxeKick()
+    {
+        transform.eulerAngles = new Vector3(0, -90, 0);
+        isKicking = true;
+        anim.Play("Kick");
+        StartCoroutine(Wait("Axe Kick"));
     }
 
     void Move(Vector3 newPos)
@@ -187,15 +201,13 @@ public class Fox : MonoBehaviour {
         else if (interactName.Equals("Axe"))
         {
             canKick = true;
+            canKickAxe = true;
             if (kicked)
             {
                 interactObject.GetComponent<Axe>().Interact();
                 kicked = false;
+                canKickAxe = false;
             }
-        }
-        else if (interactName.Equals("Platform"))
-        {
-           
         }
     }
 
@@ -207,7 +219,6 @@ public class Fox : MonoBehaviour {
             kicked = true;
             isKicking = false;
             transform.Rotate(0, 180, 0);
-            transform.GetChild(0).Rotate(0, 0, 180);
         }
         if (action.Equals("Jump") && canJump)
         {
@@ -217,6 +228,13 @@ public class Fox : MonoBehaviour {
             GetComponent<Rigidbody>().AddForce(1, -jump * 1.5f, 1);
             yield return new WaitForSeconds(0.4f);
             canJump = true;
+        }
+        if(action.Equals("Axe Kick"))
+        {
+            yield return new WaitForSeconds(0.4f);
+            kicked = true;
+            isKicking = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 
@@ -242,6 +260,7 @@ public class Fox : MonoBehaviour {
     void OnTriggerExit(Collider other)
     {
         kicked = false;
+        canKickAxe = false;
         if (other.tag == "Platform")
             transform.parent = null;
         else
