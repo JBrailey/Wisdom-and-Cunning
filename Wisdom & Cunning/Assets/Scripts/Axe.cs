@@ -10,48 +10,14 @@ public class Axes : System.Object
     public bool isAxeD;
 }
 
-public class Axe : MonoBehaviour {
+public class Axe : MonoBehaviour
+{
 
     public GameObject[] squirrels = new GameObject[4];
     public Axes axes;
     public GameObject manager;
 
     public bool canInteract = true;
-
-    GameObject[] SquirrelToSleep, SquirrelToWake;
-
-    // Use this for initialization
-    void Start()
-    {
-        gameObject.tag = "Axe";
-
-        if (axes.isAxeA) // 3 Wakes, 4 Sleeps
-        {
-            SquirrelToWake[0] = squirrels[2];
-            SquirrelToSleep[0] = squirrels[3];
-        }
-        else if (axes.isAxeB) // 1 Wakes, 3 Sleeps
-        {
-            SquirrelToWake[0] = squirrels[0];
-            SquirrelToSleep[0] = squirrels[2];
-        }
-        else if (axes.isAxeC) // 3 Wakes, 1 & 2 Sleep
-        {
-            SquirrelToWake[0] = squirrels[2];
-            SquirrelToSleep[0] = squirrels[0];
-            SquirrelToSleep[1] = squirrels[1];
-        }
-        else if (axes.isAxeD) // 2 & 4 Wake
-        {
-            SquirrelToWake[0] = squirrels[1];
-            SquirrelToWake[1] = squirrels[3];
-        }
-    }
-
-    // Update is called once per frame
-    void Update () {
-	
-	}
 
     void CheckIfSolved()
     {
@@ -79,16 +45,43 @@ public class Axe : MonoBehaviour {
         Debug.Log("Axe.Interact Called");
         if (canInteract)
         {
-            foreach (GameObject squirrel in SquirrelToWake)
+            if (axes.isAxeA) // 3 Wakes, 4 Sleeps
             {
-                squirrel.GetComponent<Squirrel>().Interact(true);
+                squirrels[2].GetComponent<Squirrel>().Interact(true);
+                squirrels[3].GetComponent<Squirrel>().Interact(false);
+                canInteract = false;
+                StartCoroutine(Wait());
             }
-
-            foreach (GameObject squirrel in SquirrelToSleep)
+            else if (axes.isAxeB) // 1 Wakes, 3 Sleeps
             {
-                squirrel.GetComponent<Squirrel>().Interact(false);
+                squirrels[0].GetComponent<Squirrel>().Interact(true);
+                squirrels[2].GetComponent<Squirrel>().Interact(false);
+                canInteract = false;
+                StartCoroutine(Wait());
             }
-            CheckIfSolved();
+            else if (axes.isAxeC) // 3 Wakes, 1 & 2 Sleep
+            {
+                squirrels[2].GetComponent<Squirrel>().Interact(true);
+                squirrels[0].GetComponent<Squirrel>().Interact(false);
+                squirrels[1].GetComponent<Squirrel>().Interact(false);
+                canInteract = false;
+                StartCoroutine(Wait());
+            }
+            else if (axes.isAxeD) // 2 & 4 Wake
+            {
+                squirrels[1].GetComponent<Squirrel>().Interact(true);
+                squirrels[3].GetComponent<Squirrel>().Interact(true);
+                canInteract = false;
+                StartCoroutine(Wait());
+            }
         }
+        CheckIfSolved();
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2f);
+        canInteract = true;
     }
 }
+
