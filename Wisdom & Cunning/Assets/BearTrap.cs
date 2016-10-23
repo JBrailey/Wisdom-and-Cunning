@@ -27,12 +27,14 @@ public class BearTrap : MonoBehaviour
     }
     void OnTriggerEnter()
     {
-        //arrow.transform.parent = null;
-        ArrowSpawn = (GameObject)Instantiate(arrow, Owl.transform.position, Quaternion.identity);
-        ArrowSpawn.transform.rotation = Quaternion.Slerp(ArrowSpawn.transform.rotation, Quaternion.LookRotation(trigger.transform.position - ArrowSpawn.transform.position), turnSpeed * Time.deltaTime);
-        arrowFlight = true;
-
-        anim.Play("BearTrap");
+        if (arrow.activeSelf == true)
+        {
+            ArrowSpawn = (GameObject)Instantiate(arrow, Owl.transform.position, Quaternion.identity);
+            ArrowSpawn.transform.LookAt(trigger.transform);
+            arrowFlight = true;
+            arrow.SetActive(false);
+            anim.Play("BearTrap");
+        }
     }
     void flight()
     {
