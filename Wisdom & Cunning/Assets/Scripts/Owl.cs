@@ -8,12 +8,16 @@ public class Owl : MonoBehaviour
     public Transform goTo;
     public GameObject arrow;
     public Camera camera;
+    public Transform fox;
 
     public Vector3 canReturn = new Vector3(1, 0, 0);
     public float turnSpeed;
     public float speed;
     public float distance;
     private float Accelerate;
+    private bool inMaze = false;
+    public Vector3 flyUp = new Vector3(0,1,0);
+    public Vector3 flydown = new Vector3(0.035f, 0.5f, 0.07600006f);
 
     public int layerMask = 1<<50;
 
@@ -44,6 +48,7 @@ public class Owl : MonoBehaviour
     
     void Follow()
     {        
+        
         if (returningToFox)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), Time.deltaTime * turnSpeed);
@@ -51,6 +56,16 @@ public class Owl : MonoBehaviour
             {
                 Accelerate = speed;
             }
+            transform.position += transform.forward * Accelerate * Time.deltaTime;
+        }
+        if(returningToFox && inMaze == true)
+        {
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followPoint.position - transform.position), Time.deltaTime * turnSpeed);
+            if (Accelerate < speed)
+            {
+                Accelerate = speed;
+            }
+            followPoint.position += flyUp;
             transform.position += transform.forward * Accelerate * Time.deltaTime;
         }
         if (returningToFox == false)
@@ -118,7 +133,7 @@ public class Owl : MonoBehaviour
         {
             returningToFox = true;
         }
-        // transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+      
     }
 
     void OnTriggerEnter(Collider other)
@@ -126,6 +141,18 @@ public class Owl : MonoBehaviour
         if (other.transform.tag == "BearTrap")
         {
             arrow.SetActive(false);
+        }
+        if (other.transform.tag == "Maze Entry")
+        {
+            inMaze = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Maze Entry")
+        {
+            followPoint.transform.position = fox.transform.position + flydown;
+            inMaze = false;
         }
     }
 }
