@@ -47,6 +47,10 @@ public class Fox : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         CheckKeyPress();
+        if (isMoving)
+        {
+            Move(new Vector3(speed, 0, 0));
+        }
     }
 
     void CheckKeyPress()
@@ -97,7 +101,7 @@ public class Fox : MonoBehaviour {
                     isMoving = true;
                     anim.Play("Run");
                 }
-                Move(new Vector3(speed, 0, 0));
+                //Move(new Vector3(speed, 0, 0));
             }
         }
 
@@ -137,11 +141,11 @@ public class Fox : MonoBehaviour {
 
     void Kick()
     {
-        transform.Rotate(0, 180, 0); // Rotate Fox so he Kicks the Gate
-        transform.GetChild(0).Rotate(0, 0, 180); // Make Camera not Rotate
-        isKicking = true; // Keeps Idle Anim from Playing
-        anim.Play("Kick"); // Plays Kicking Anim
-        StartCoroutine(Wait("Kick")); // Wait for animation to play before opening the gate
+        transform.Rotate(0, 180, 0);
+        transform.GetChild(0).Rotate(0, 0, 180);
+        isKicking = true; 
+        anim.Play("Kick");
+        StartCoroutine(Wait("Kick"));
     }
 
     void Move(Vector3 newPos)
@@ -200,10 +204,10 @@ public class Fox : MonoBehaviour {
         if (action.Equals("Kick"))
         {
             yield return new WaitForSeconds(0.4f); 
-            kicked = true; // Object Gets Kicked
-            isKicking = false; // No longer Kicking, Idle Anim can Play
-            transform.Rotate(0, 180, 0); // Rotate Fox Back
-            transform.GetChild(0).Rotate(0, 0, 180); // Make Camera not Rotate
+            kicked = true;
+            isKicking = false;
+            transform.Rotate(0, 180, 0);
+            transform.GetChild(0).Rotate(0, 0, 180);
         }
         if (action.Equals("Jump") && canJump)
         {
