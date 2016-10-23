@@ -12,27 +12,18 @@ public class Squirrel : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        anim = gameObject.GetComponent<Animator>();
         if (startAwake)
         {
             anim.Play("Awake");
         }else
         {
             anim.Play("Asleep");
-        }
-        anim.GetComponent<Animator>();
+        }       
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	    if (asleep == false)
-        {
-            GetComponent<BoxCollider>().enabled = false;
-        }
-        else
-        {
-            GetComponent<BoxCollider>().enabled = true;
-        }
-
         if (isMoving)
         {
             transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime);
@@ -44,14 +35,15 @@ public class Squirrel : MonoBehaviour {
         Debug.Log("Squirrel.Interact Called");
         if (isWakingUp)
         {
-            if (!asleep)
-            {
-                FallAsleep();
-            }
-            else
-            {
-                WakeUp();
-            }
+            WakeUp();
+            //if (!asleep)
+            //{
+            //    FallAsleep();
+            //}
+            //else
+            //{
+            //    WakeUp();
+            //}
         }
         else
         {

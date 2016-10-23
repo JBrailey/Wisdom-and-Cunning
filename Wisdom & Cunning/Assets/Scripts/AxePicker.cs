@@ -19,33 +19,42 @@ public class AxePicker : MonoBehaviour
 
     void DetermineAxes()
     {
-        int axeNum = Random.Range(0, 3);
+        int axeNum = Random.Range(0, 4);
+        bool axeSet = false;
 
         SetAxe(axeNum, 'A'); // Axe A
+        axeNum = Random.Range(0, 4);
 
-        while (!CheckIfSet(axeNum)) // Axe B
+        while (!axeSet) // Axe B
         {
             if (!CheckIfSet(axeNum))
             {
                 SetAxe(axeNum, 'B');
+                axeSet = true;
             }
-            axeNum = Random.Range(0, 3);
+            axeNum = Random.Range(0, 4);
         }
-        while (!CheckIfSet(axeNum)) // Axe C
+
+        axeSet = false;
+        while (!axeSet) // Axe C
         {
             if (!CheckIfSet(axeNum))
             {
                 SetAxe(axeNum, 'C');
+                axeSet = true;
             }
-            axeNum = Random.Range(0, 3);
+            axeNum = Random.Range(0, 4);
         }
-        while (!CheckIfSet(axeNum)) // Axe D
+
+        axeSet = false;
+        while (!axeSet) // Axe D
         {
             if (!CheckIfSet(axeNum))
             {
                 SetAxe(axeNum, 'D');
+                axeSet = true;
             }
-            axeNum = Random.Range(0, 3);
+            axeNum = Random.Range(0, 4);
         }
     }
 
@@ -102,6 +111,7 @@ public class AxePicker : MonoBehaviour
             {
                 axe1.GetComponent<Axe>().axes.isAxeD = true;
             }
+            Axe1Set = true;
         }
         else if (axeNum == 1)
         {
@@ -121,6 +131,7 @@ public class AxePicker : MonoBehaviour
             {
                 axe2.GetComponent<Axe>().axes.isAxeD = true;
             }
+            Axe2Set = true;
         }
         else if (axeNum == 2)
         {
@@ -140,6 +151,7 @@ public class AxePicker : MonoBehaviour
             {
                 axe3.GetComponent<Axe>().axes.isAxeD = true;
             }
+            Axe3Set = true;
         }
         else if (axeNum == 3)
         {
@@ -159,6 +171,7 @@ public class AxePicker : MonoBehaviour
             {
                 axe4.GetComponent<Axe>().axes.isAxeD = true;
             }
+            Axe4Set = true;
         }
     }
 
