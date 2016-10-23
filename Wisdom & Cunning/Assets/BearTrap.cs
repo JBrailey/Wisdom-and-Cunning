@@ -7,6 +7,7 @@ public class BearTrap : MonoBehaviour
     public GameObject Owl;
     public GameObject arrow;
     public GameObject trigger;
+    public GameObject followpoint;
 
     bool arrowFlight = false;
 
@@ -34,6 +35,8 @@ public class BearTrap : MonoBehaviour
             arrowFlight = true;
             arrow.SetActive(false);
             anim.Play("BearTrap");
+            followpoint.SetActive(false);
+
         }
     }
     void flight()

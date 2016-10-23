@@ -28,8 +28,11 @@ public class Crossbow : MonoBehaviour {
 
     void Shoot()
     {
-        GameObject projectile = (GameObject)Instantiate(projectileObject, projectileSpawn.position, Quaternion.identity);
-        projectile.GetComponent<Projectile>().Setup(target, projectileSpeed);
-        arrow.SetActive(false);
+        if (arrow.activeSelf == true)
+        {
+            GameObject projectile = (GameObject)Instantiate(projectileObject, projectileSpawn.position, Quaternion.identity);
+            projectile.GetComponent<Projectile>().Setup(target, projectileSpeed);
+            arrow.SetActive(false);
+        }
     }
 }
