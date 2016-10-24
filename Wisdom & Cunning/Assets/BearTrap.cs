@@ -14,9 +14,13 @@ public class BearTrap : MonoBehaviour
     public float speed;
     public float turnSpeed;
     GameObject ArrowSpawn;
+
+    AudioSource snap;
+
     // Use this for initialization
     void Start()
     {
+        snap = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         transform.tag = "BearTrap";
     }
@@ -35,8 +39,8 @@ public class BearTrap : MonoBehaviour
             arrowFlight = true;
             arrow.SetActive(false);
             anim.Play("BearTrap");
+            snap.Play();
             followpoint.SetActive(false);
-
         }
     }
     void flight()

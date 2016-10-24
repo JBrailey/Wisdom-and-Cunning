@@ -27,6 +27,7 @@ public class Squirrel : MonoBehaviour {
         if (isMoving)
         {
             transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime);
+            anim.Play("Run");
         }
 	}
 
@@ -36,14 +37,6 @@ public class Squirrel : MonoBehaviour {
         if (isWakingUp)
         {
             WakeUp();
-            //if (!asleep)
-            //{
-            //    FallAsleep();
-            //}
-            //else
-            //{
-            //    WakeUp();
-            //}
         }
         else
         {
