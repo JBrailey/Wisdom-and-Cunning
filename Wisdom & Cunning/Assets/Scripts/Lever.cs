@@ -6,35 +6,27 @@ public class Lever : MonoBehaviour
 
     public GameObject interactedObject;
     Animator anim;
+    AudioSource leverFX;
 
     bool switched = false;
 
     // Use this for initialization
     void Start()
     {
+        leverFX = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         gameObject.tag = "Interact";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void Interact()
     {
         Debug.Log("Lever.Interact Called");
         PullLever();
-        //if (switched == false)
-        //{
-        //    anim.Play("Lever");
-        //    switched = true;
-        //}
     }
 
     void PullLever()
     {
+        leverFX.Play();
         if (interactedObject.tag.Equals("Gate"))
         {
             interactedObject.GetComponent<Gate>().Interact();
