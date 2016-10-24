@@ -29,7 +29,10 @@ public class CatapaultArm : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        canInteract = false;
+        if (other.tag == "Fox")
+        {
+            canInteract = false;
+        }
     }
 
     void catapault()
