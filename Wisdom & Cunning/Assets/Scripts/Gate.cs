@@ -71,6 +71,7 @@ public class Gate : MonoBehaviour
         {
             if (isUnlocked())
             {
+                transform.GetChild(0).gameObject.SetActive(false); // Get rid of Plane
                 isOpen = true;
             }
         }
@@ -87,10 +88,13 @@ public class Gate : MonoBehaviour
 
     public int UseKeys(int keysUsed)
     {
-        while(keyCount < keysRequired && keysUsed > 0)
+        if (keysUsed >= keysRequired)
         {
-            keyCount++;
-            keysUsed--;
+            while (keyCount < keysRequired && keysUsed > 0)
+            {
+                keyCount++;
+                keysUsed--;
+            }
         }
         return keysUsed;
     }
