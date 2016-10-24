@@ -10,8 +10,6 @@ public class Fox : MonoBehaviour {
     Animator anim;
     AudioSource run, kick;
     
-
-
     //For WASD Movement
     bool canMoveWASD = false;
 
@@ -41,7 +39,6 @@ public class Fox : MonoBehaviour {
     Vector3 camLeft = new Vector3(90, 0, 0);
     Vector3 camRight = new Vector3(90, 0, -180);
 
-
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -66,45 +63,19 @@ public class Fox : MonoBehaviour {
     {
         isMoving = false;
 
-        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        if (!isKicking)
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
             {
-                transform.eulerAngles = right;
-                Transform camera = transform.GetChild(0);
-                camera.transform.eulerAngles = camLeft;
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                transform.eulerAngles = left;
-                Transform camera = transform.GetChild(0);
-                camera.transform.eulerAngles = camLeft;
-            }
-
-            if (!isMoving)
-            {
-                isMoving = true;
-                anim.Play("Run");
-                if (!run.isPlaying)
+                if (Input.GetKey(KeyCode.D))
                 {
-                    run.Play();
-                }
-            }
-            Move(new Vector3(speed, 0, 0));
-        }
-        else if (canMoveWASD)
-        {
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
-            {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    transform.eulerAngles = up;
+                    transform.eulerAngles = right;
                     Transform camera = transform.GetChild(0);
                     camera.transform.eulerAngles = camLeft;
                 }
-                else if (Input.GetKey(KeyCode.S))
+                else if (Input.GetKey(KeyCode.A))
                 {
-                    transform.eulerAngles = down;
+                    transform.eulerAngles = left;
                     Transform camera = transform.GetChild(0);
                     camera.transform.eulerAngles = camLeft;
                 }
@@ -112,52 +83,78 @@ public class Fox : MonoBehaviour {
                 if (!isMoving)
                 {
                     isMoving = true;
-                    anim.Play("Run");                    
+                    anim.Play("Run");
+                    if (!run.isPlaying)
+                    {
+                        run.Play();
+                    }
+                }
+                Move(new Vector3(speed, 0, 0));
+            }
+            else if (canMoveWASD)
+            {
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+                {
+                    if (Input.GetKey(KeyCode.W))
+                    {
+                        transform.eulerAngles = up;
+                        Transform camera = transform.GetChild(0);
+                        camera.transform.eulerAngles = camLeft;
+                    }
+                    else if (Input.GetKey(KeyCode.S))
+                    {
+                        transform.eulerAngles = down;
+                        Transform camera = transform.GetChild(0);
+                        camera.transform.eulerAngles = camLeft;
+                    }
+
+                    if (!isMoving)
+                    {
+                        isMoving = true;
+                        anim.Play("Run");
+                    }
                 }
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {            
-            //Kick
-            if (canKick)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (canKickAxe)
+                //Kick
+                if (canKick)
                 {
-                    AxeKick();
-                   
+                    if (canKickAxe)
+                    {
+                        AxeKick();
+                    }
+                    else
+                    {
+                        Kick();
+                    }
                 }
-                else
+                else if (canInteract)
                 {
-                    Kick();
-                   
-                }                
+                    interacted = true;
+                }
             }
-            else if (canInteract)
+
+            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
             {
-                interacted = true;
+                isMoving = false;
             }
-        }
 
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W)|| Input.GetKeyUp(KeyCode.S))
-        {
-            isMoving = false;
-        }
-
-        //Check if Idle
-        if (!isMoving)
-        {
-            if (!isKicking)
+            //Check if Idle
+            if (!isMoving)
             {
-                anim.Play("Idle");
-            }            
-        }
+                if (!isKicking)
+                {
+                    anim.Play("Idle");
+                }
+            }
 
-        // Jump
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
-        }             
+            // Jump
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+            }
+        }                   
     }
 
     void Kick()
@@ -166,8 +163,7 @@ public class Fox : MonoBehaviour {
         isKicking = true; 
         anim.Play("Kick");
         kick.Play();
-        StartCoroutine(Wait("Kick"));
-        
+        StartCoroutine(Wait("Kick"));        
     }
 
     void AxeKick()
