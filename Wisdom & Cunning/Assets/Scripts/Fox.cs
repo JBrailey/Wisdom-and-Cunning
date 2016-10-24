@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor.Audio;
 
 public class Fox : MonoBehaviour {
 
