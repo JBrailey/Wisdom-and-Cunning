@@ -14,62 +14,26 @@ Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunn
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.084 seconds
+- Completed reload, in  0.079 seconds
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Brendan\Desktop\AIE\Wisdom & Cunning\Wisdom-and-Cunning\Wisdom & Cunning\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.457070 ms
+UnloadTime: 0.415679 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 36e0 -> priority: 1 
-  Thread -> id: 12b4 -> priority: 1 
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+  Thread -> id: ae0 -> priority: 1 
+  Thread -> id: 3a08 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
 The tree tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 139)
 
-The tree Terrain rock must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
+UnloadTime: 2.603427 ms
 
-The tree tree must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- 
-(Filename:  Line: 139)
-
-UnloadTime: 1.207442 ms
-
-Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 14296.
-Total: 2.048002 ms (FindLiveObjects: 0.299433 ms CreateObjectMapping: 0.157636 ms MarkObjects: 0.797637 ms  DeleteObjects: 0.793039 ms)
-
-Log.Interact Called
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Gate Told to Interact
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Gate Told to Interact
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Log.Interact Called
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Gate Told to Interact
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Interact Name is Lever
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Lever.Interact Called
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 2095.
+Total: 0.547767 ms (FindLiveObjects: 0.064127 ms CreateObjectMapping: 0.026826 ms MarkObjects: 0.228151 ms  DeleteObjects: 0.228406 ms)
 
 Gate Told to Interact
  
