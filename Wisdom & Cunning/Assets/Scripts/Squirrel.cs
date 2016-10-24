@@ -30,7 +30,6 @@ public class Squirrel : MonoBehaviour {
         if (isMoving)
         {
             transform.Translate(new Vector3(speed, 0, 0) * Time.deltaTime);
-            anim.Play("Run");
         }
 	}
 
@@ -49,17 +48,23 @@ public class Squirrel : MonoBehaviour {
 
     void WakeUp()
     {
-        squirrelFX.Play();
-        asleep = false;
-        anim.Play("Wake Up");
-        StartCoroutine(Wait("WaitForIdle"));
+        if (asleep)
+        {
+            squirrelFX.Play();
+            asleep = false;
+            anim.Play("Wake Up");
+            StartCoroutine(Wait("WaitForIdle"));
+        }                
     }
 
     void FallAsleep()
     {
-        asleep = true;
-        anim.Play("Fall Asleep");
-        StartCoroutine(Wait("WaitForIdle"));
+        if (!asleep)
+        {
+            asleep = true;
+            anim.Play("Fall Asleep");
+            StartCoroutine(Wait("WaitForIdle"));
+        }
     }
 
     IEnumerator Wait(string action)
@@ -87,6 +92,7 @@ public class Squirrel : MonoBehaviour {
     {
         transform.eulerAngles = new Vector3(0, -90, 0);
         isMoving = true;
+        anim.Play("Run");
         StartCoroutine(Wait("Despawn"));
     }
 }
