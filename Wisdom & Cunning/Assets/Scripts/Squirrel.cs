@@ -9,9 +9,12 @@ public class Squirrel : MonoBehaviour {
     public float speed = 10f;
     bool isMoving = false;
 
+    AudioSource squirrelFX;
+
 	// Use this for initialization
 	void Start ()
     {
+        squirrelFX = GetComponent<AudioSource>();
         anim = gameObject.GetComponent<Animator>();
         if (startAwake)
         {
@@ -46,6 +49,7 @@ public class Squirrel : MonoBehaviour {
 
     void WakeUp()
     {
+        squirrelFX.Play();
         asleep = false;
         anim.Play("Wake Up");
         StartCoroutine(Wait("WaitForIdle"));
