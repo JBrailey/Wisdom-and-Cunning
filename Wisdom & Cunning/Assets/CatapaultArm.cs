@@ -4,6 +4,7 @@ using System.Collections;
 public class CatapaultArm : MonoBehaviour
 {
     Animator anim;
+    AudioSource boing;
 
     bool canInteract = false;
 
@@ -11,6 +12,7 @@ public class CatapaultArm : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        boing = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class CatapaultArm : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {            
             anim.Play("Arm");
+            boing.Play();
         }
         else
             return;
