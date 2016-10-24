@@ -283,5 +283,12 @@ public class Fox : MonoBehaviour {
     public void ToggleMovement(bool isUnlocked)
     {
         canMoveWASD = isUnlocked;
+        if (isUnlocked)
+        {
+            speed = 30;
+        }else
+        {
+            speed = 17.5f;
+        }
     } 
 }
