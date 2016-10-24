@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor.Audio;
 
 public class Fox : MonoBehaviour {
 
@@ -8,6 +9,9 @@ public class Fox : MonoBehaviour {
     public float speed = 1.0f;
     public float jump;
     Animator anim;
+    AudioSource run;
+    
+
 
     //For WASD Movement
     bool canMoveWASD = false;
@@ -43,6 +47,7 @@ public class Fox : MonoBehaviour {
     void Start () {
         anim = GetComponent<Animator>();
         gameObject.tag = "Fox";
+        run = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -51,6 +56,7 @@ public class Fox : MonoBehaviour {
         if (isMoving)
         {
             Move(new Vector3(speed, 0, 0));
+            
         }
     }
 
@@ -77,6 +83,10 @@ public class Fox : MonoBehaviour {
             {
                 isMoving = true;
                 anim.Play("Run");
+                if (!run.isPlaying)
+                {
+                    run.Play();
+                }
             }
             Move(new Vector3(speed, 0, 0));
         }
