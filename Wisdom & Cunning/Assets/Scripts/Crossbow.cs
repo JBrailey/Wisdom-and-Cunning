@@ -10,9 +10,11 @@ public class Crossbow : MonoBehaviour {
 
     public float projectileSpeed = 15f;
 
+    AudioSource arrowFX;
 
 	// Use this for initialization
 	void Start () {
+        arrowFX = GetComponent<AudioSource>();
         transform.LookAt(target);
 	}
 	
@@ -30,6 +32,7 @@ public class Crossbow : MonoBehaviour {
     {
         if (arrow.activeSelf == true)
         {
+            arrowFX.Play();
             GameObject projectile = (GameObject)Instantiate(projectileObject, projectileSpawn.position, Quaternion.identity);
             projectile.GetComponent<Projectile>().Setup(target, projectileSpeed);
             arrow.SetActive(false);
