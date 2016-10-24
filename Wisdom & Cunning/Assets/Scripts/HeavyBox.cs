@@ -4,12 +4,13 @@ using System.Collections;
 public class HeavyBox : MonoBehaviour
 {
     public GameObject invisibleWall;
+    AudioSource clang;
   
 
     // Use this for initialization
     void Start()
     {
-    
+        clang = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,7 +25,8 @@ public class HeavyBox : MonoBehaviour
         {
             GetComponent<Rigidbody>().useGravity = true;
             GetComponent<Rigidbody>().AddForce(1, -4000, 1);
-            invisibleWall.SetActive(false);        
+            invisibleWall.SetActive(false);
+            clang.Play();
         }
     }
 }
