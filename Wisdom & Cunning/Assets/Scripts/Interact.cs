@@ -30,11 +30,7 @@ public class Interact : MonoBehaviour {
             if (objectName.Equals("Lever"))
             {
                 collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);               
-            }
-            else if (objectName.Equals("Locked Gate"))
-            {
-                collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);
-            }    
+            }  
             else if (objectName.Equals("Crossbow"))
             {
                 collider.gameObject.GetComponent<Owl>().Interact(objectName, gameObject);

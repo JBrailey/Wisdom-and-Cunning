@@ -24,9 +24,6 @@ public class Owl : MonoBehaviour
 
     bool returningToFox = false;
 
-    // For Locked Gate
-    public GameObject keyManager;
-
     //TODO 
 
     // Use this for initialization
@@ -110,11 +107,6 @@ public class Owl : MonoBehaviour
         {
             Debug.Log("Interact Name is Lever");
             interactObject.GetComponent<Lever>().Interact();
-        }
-        else if (interactName.Equals("Locked Gate"))
-        {
-            // Uses Keys
-            keyManager.GetComponent<KeyManager>().UseKeys(interactObject);
         }
         else if (interactName.Equals("Crossbow"))
         {
