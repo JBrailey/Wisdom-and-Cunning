@@ -18,6 +18,8 @@ public class Gate : MonoBehaviour
     public int keysRequired;
     int keyCount = 0;
 
+    AudioSource openSoundFX;
+
     void Start()
     {
         gameObject.tag = "Gate";
@@ -38,6 +40,7 @@ public class Gate : MonoBehaviour
             isLockedGate = false;
             isKickedGate = false;
         }
+        openSoundFX = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -66,6 +69,7 @@ public class Gate : MonoBehaviour
             {
                 transform.GetChild(0).gameObject.SetActive(false);
             }
+            openSoundFX.Play();
         }
         else if (isLockedGate)
         {
@@ -73,6 +77,7 @@ public class Gate : MonoBehaviour
             {
                 transform.GetChild(0).gameObject.SetActive(false); // Get rid of Plane
                 isOpen = true;
+                openSoundFX.Play();
             }
         }
     }
