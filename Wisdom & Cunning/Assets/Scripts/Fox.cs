@@ -9,7 +9,7 @@ public class Fox : MonoBehaviour {
     public float speed = 1.0f;
     public float jump;
     Animator anim;
-    AudioSource run;
+    AudioSource run, kick;
     
 
 
@@ -47,7 +47,10 @@ public class Fox : MonoBehaviour {
     void Start () {
         anim = GetComponent<Animator>();
         gameObject.tag = "Fox";
-        run = GetComponent<AudioSource>();
+        AudioSource[] audio = GetComponents<AudioSource>();
+
+        run = audio[0];
+        kick = audio[1];
     }
 	
 	// Update is called once per frame
@@ -110,7 +113,7 @@ public class Fox : MonoBehaviour {
                 if (!isMoving)
                 {
                     isMoving = true;
-                    anim.Play("Run");
+                    anim.Play("Run");                    
                 }
             }
         }
@@ -123,10 +126,12 @@ public class Fox : MonoBehaviour {
                 if (canKickAxe)
                 {
                     AxeKick();
+                   
                 }
                 else
                 {
                     Kick();
+                   
                 }                
             }
             else if (canInteract)
@@ -161,7 +166,9 @@ public class Fox : MonoBehaviour {
         transform.Rotate(0, 180, 0);
         isKicking = true; 
         anim.Play("Kick");
+        kick.Play();
         StartCoroutine(Wait("Kick"));
+        
     }
 
     void AxeKick()
@@ -169,6 +176,7 @@ public class Fox : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, -90, 0);
         isKicking = true;
         anim.Play("Kick");
+        kick.Play();
         StartCoroutine(Wait("Axe Kick"));
     }
 
