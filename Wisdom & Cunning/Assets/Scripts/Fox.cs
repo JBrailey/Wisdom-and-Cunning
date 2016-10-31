@@ -113,6 +113,7 @@ public class Fox : MonoBehaviour {
                         isMoving = true;
                         anim.Play("Run");
                     }
+                    Move(new Vector3(speed, 0, 0));
                 }
             }
             if (Input.GetKeyDown(KeyCode.E))
