@@ -5,7 +5,7 @@ public class Fox : MonoBehaviour {
 
     public GameObject keyManager;
 
-    public float speed = 1.0f;
+    public float speed;
     public float jump;
     Animator anim;
     AudioSource run, kick;
@@ -54,8 +54,7 @@ public class Fox : MonoBehaviour {
         CheckKeyPress();
         if (isMoving)
         {
-            Move(new Vector3(speed, 0, 0));
-            
+            Move(new Vector3(speed, 0, 0));            
         }
     }
 
@@ -89,7 +88,6 @@ public class Fox : MonoBehaviour {
                         run.Play();
                     }
                 }
-                Move(new Vector3(speed, 0, 0));
             }
             else if (canMoveWASD)
             {
@@ -113,7 +111,6 @@ public class Fox : MonoBehaviour {
                         isMoving = true;
                         anim.Play("Run");
                     }
-                    Move(new Vector3(speed, 0, 0));
                 }
             }
             if (Input.GetKeyDown(KeyCode.E))
@@ -286,10 +283,10 @@ public class Fox : MonoBehaviour {
         canMoveWASD = isUnlocked;
         if (isUnlocked)
         {
-            speed = 30;
+            speed = 35;
         }else
         {
-            speed = 17.5f;
+            speed = 23;
         }
     } 
 }
